@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/4a065ffd86.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- reset.css -->
+    <link rel="stylesheet" href="reset.css">
+    <!-- style.css -->
+    <link rel="stylesheet" href="style.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <header class="header-wrap">
+        <div class="logo-wrap">
+            <img src="./" alt="ロゴ画像">            
+            <h1 class="site-title">headerロゴ</h1>
+        </div>
+        <button class="burger-button">
+            <span class="bar bar-top"></span>
+            <span class="bar bar-middle"></span>
+            <span class="bar bar-bottom"></span>
+        </button>
+        <nav class="header-nav">
+            <ul class="nav-list">
+                <li class="nav-list-item">
+                    <a class="list-item-link" href="#!">
+                        ナビリスト
+                    </a>
+                </li>
+                <li class="nav-list-item">
+                    <a class="list-item-link" href="#!">
+                        ナビリスト
+                    </a>
+                </li>
+                <li class="nav-list-item">
+                    <a class="list-item-link" href="#!">
+                        ナビリスト
+                    </a>
+                </li>
+                <li class="nav-list-item">
+                    <a class="list-item-link" href="#!">
+                        ナビリスト
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+   
+    <main class="main-wrap">
+    
+        <!-- タブ切り替えでカードが出てくる -->
+        <section class="section-wrap">
+            <div class="section-head">
+                <h2 class="section-title">
+                    タブパネル jQuery
+                </h2>
+            </div>
+            <!-- section-head -->
+
+            <div class="section-body">
+                <div class="tab-wrap">
+                    <ul class="tabs">
+                        <li class="tab tab-active" rel="panel1">cardタイプ</li>
+                        <li class="tab" rel="panel2">画像ギャラリー</li>
+                        <li class="tab" rel="panel3">リンク集</li>
+                    </ul><!-- // tabs -->
+                    
+                    <div class="panels">
+        
+                        <!-- cardタイプ -->
+                        <div class="panel panel-show" id="panel1">
+                            <div class="card-wrap">
+                                <!-- card1 -->
+                                <article class="card">
+                                    <div class="card-head">
+                                        <h3 class="card-title">アーティクル1のタイトル</h3>
+                                        <picture class="card-picture">
+                                            <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+                                            <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
+                                            <img src="https://placehold.jp/500x500.png" alt="画像1">
+                                        </picture>
+                                    </div>
+                                    <!-- article-head -->
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            画面サイズによって、読み込む画像を選択する。<br>
+                                            タブレット未満では画像は150 × 150、それ以上だと500 × 500の画像が表示される。
+                                        </p>
+                                    </div>
+                                    <!-- article-body -->
+                                    <div class="card-foot">
+                                        <a href="#!" class="card-link">
+                                            記事のリンク
+                                        </a>
+                                    </div>
+                                    <!-- article-foot -->
+                                </article>
+                                <!-- card1 -->
+        
+                                <!-- card2 -->
+                                <article class="card">
+                                        <div class="card-head">
+                                            <h3 class="card-title">アーティクル1のタイトル</h3>
+                                            <picture class="card-picture">
+                                                <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+                                                <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
+                                                <img src="https://placehold.jp/500x500.png" alt="画像1">
+                                            </picture>
+                                        </div>
+                                        <!-- article-head -->
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                画面サイズによって、読み込む画像を選択する。<br>
+                                                タブレット未満では画像は150 × 150、それ以上だと500 × 500の画像が表示される。
+                                            </p>
+                                        </div>
+                                        <!-- article-body -->
+                                        <div class="card-foot">
+                                            <a href="#!" class="card-link">
+                                                記事のリンク
+                                            </a>
+                                        </div>
+                                        <!-- article-foot -->
+                                    </article>
+                                <!-- card2 -->
+            
+                                <!-- card3 -->
+                                <article class="card">
+                                        <div class="card-head">
+                                            <h3 class="card-title">アーティクル1のタイトル</h3>
+                                            <picture class="card-picture">
+                                                <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+                                                <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
+                                                <img src="https://placehold.jp/500x500.png" alt="画像1">
+                                            </picture>
+                                        </div>
+                                        <!-- article-head -->
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                画面サイズによって、読み込む画像を選択する。<br>
+                                                タブレット未満では画像は150 × 150、それ以上だと500 × 500の画像が表示される。
+                                            </p>
+                                        </div>
+                                        <!-- article-body -->
+                                        <div class="card-foot">
+                                            <a href="#!" class="card-link">
+                                                記事のリンク
+                                            </a>
+                                        </div>
+                                        <!-- article-foot -->
+                                    </article>
+                                <!-- card3 -->
+            
+                                <!-- card4 -->
+                                <article class="card">
+                                        <div class="card-head">
+                                            <h3 class="card-title">アーティクル1のタイトル</h3>
+                                            <picture class="card-picture">
+                                                <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+                                                <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
+                                                <img src="https://placehold.jp/500x500.png" alt="画像1">
+                                            </picture>
+                                        </div>
+                                        <!-- article-head -->
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                画面サイズによって、読み込む画像を選択する。<br>
+                                                タブレット未満では画像は150 × 150、それ以上だと500 × 500の画像が表示される。
+                                            </p>
+                                        </div>
+                                        <!-- article-body -->
+                                        <div class="card-foot">
+                                            <a href="#!" class="card-link">
+                                                記事のリンク
+                                            </a>
+                                        </div>
+                                        <!-- article-foot -->
+                                    </article>
+                                <!-- card4 -->
+                            </div><!-- article-wrap -->
+                        </div>
+                        <!-- cardタイプ -->
+                    
+                        <!-- 画像ギャラリー -->
+                        <div class="panel" id="panel2">
+                            <div class="gallery-wrap">
+                                <!-- ギャラリー1 -->
+                                <article class="gallery">
+                                    <div class="gallery-body">
+                                        <picture class="gallery-picture">
+                                            <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+                                            <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
+                                            <img src="https://placehold.jp/500x500.png" alt="画像1">
+                                        </picture>
+                                    </div>
+                                </article>
+                                <!-- ギャラリー記事1 -->
+        
+                                <!-- ギャラリー2 -->
+                                <article class="gallery">
+                                        <div class="gallery-body">
+                                            <picture class="gallery-picture">
+                                                <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+                                                <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
+                                                <img src="https://placehold.jp/500x500.png" alt="画像1">
+                                            </picture>
+                                        </div>
+                                    </article>
+                                <!-- ギャラリー2 -->
+            
+                                <!-- ギャラリー3 -->
+                                <article class="gallery">
+                                        <div class="gallery-body">
+                                            <picture class="gallery-picture">
+                                                <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+                                                <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
+                                                <img src="https://placehold.jp/500x500.png" alt="画像1">
+                                            </picture>
+                                        </div>
+                                    </article>
+                                <!-- ギャラリー3 -->
+            
+                                <!-- ギャラリー4 -->
+                                <article class="gallery">
+                                        <div class="gallery-body">
+                                            <picture class="gallery-picture">
+                                                <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+                                                <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
+                                                <img src="https://placehold.jp/500x500.png" alt="画像1">
+                                            </picture>
+                                        </div>
+                                    </article>
+                                <!-- ギャラリー4 -->
+                                
+                                <!-- ギャラリー5 -->
+                                <article class="gallery">
+                                        <div class="gallery-body">
+                                            <picture class="gallery-picture">
+                                                <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+                                                <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
+                                                <img src="https://placehold.jp/500x500.png" alt="画像1">
+                                            </picture>
+                                        </div>
+                                    </article>
+                                <!-- ギャラリー5 -->
+        
+                                <!-- ギャラリー6 -->
+                                <article class="gallery">
+                                        <div class="gallery-body">
+                                            <picture class="gallery-picture">
+                                                <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+                                                <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
+                                                <img src="https://placehold.jp/500x500.png" alt="画像1">
+                                            </picture>
+                                        </div>
+                                    </article>
+                                <!-- ギャラリー6 -->
+        
+                            </div><!-- gallery-wrap -->
+                        </div>
+                        <!-- 画像ギャラリー -->
+        
+                        <!-- News集 -->
+                        <div class="panel" id="panel3">
+                            <div class="news-wrap">
+                                    <!-- news1 -->
+                                    <article class="news">
+                                        <h3 class="news-title">
+                                            <a class="news-link" href="#!">
+                                                記事のタイトル
+                                            </a>
+                                        </h3>
+                                        
+                                        <img class="news-picture" src="https://placehold.jp/150x150.png" alt="ダミー画像">
+                                    
+                                        <p class="news-date">
+                                            <time datetime="2021/12/10">2021/12/10</time>
+                                        </p>
+                                        <p class="news-tag">
+                                            <a class="news-link" href="#!">
+                                                お知らせ
+                                            </a>
+                                        </p>
+                                    </article>
+                                    <!-- news1 -->
+                                    
+                                    <!-- news2 -->
+                                    <article class="news">
+                                            <h3 class="news-title">
+                                                <a class="news-link" href="#!">
+                                                    記事のタイトル
+                                                </a>
+                                            </h3>
+                                            
+                                            <img class="news-picture" src="https://placehold.jp/150x150.png" alt="ダミー画像">
+                                        
+                                            <p class="news-date">
+                                                <time datetime="2021/12/10">2021/12/10</time>
+                                            </p>
+                                            <p class="news-tag">
+                                                <a class="news-link" href="#!">
+                                                    お知らせ
+                                                </a>
+                                            </p>
+                                    </article>
+                                    <!-- news2 -->
+                
+                                    <!-- news3 -->
+                                    <article class="news">
+                                            <h3 class="news-title">
+                                                <a class="news-link" href="#!">
+                                                    記事のタイトル
+                                                </a>
+                                            </h3>
+                                            
+                                            <img class="news-picture" src="https://placehold.jp/150x150.png" alt="ダミー画像">
+                                        
+                                            <p class="news-date">
+                                                <time datetime="2021/12/10">2021/12/10</time>
+                                            </p>
+                                            <p class="news-tag">
+                                                <a class="news-link" href="#!">
+                                                    お知らせ
+                                                </a>
+                                            </p>
+                                        </article>
+                                    <!-- news3 -->
+                
+                                    <!-- news4 -->
+                                    <article class="news">
+                                            <h3 class="news-title">
+                                                <a class="news-link" href="#!">
+                                                    記事のタイトル
+                                                </a>
+                                            </h3>
+                                            
+                                            <img class="news-picture" src="https://placehold.jp/150x150.png" alt="ダミー画像">
+                                        
+                                            <p class="news-date">
+                                                <time datetime="2021/12/10">2021/12/10</time>
+                                            </p>
+                                            <p class="news-tag">
+                                                <a class="news-link" href="#!">
+                                                    お知らせ
+                                                </a>
+                                            </p>
+                                        </article>
+                                    <!-- news4 -->
+                            </div><!-- news-wrap -->
+                        </div>
+                        <!-- News集 -->
+        
+                    </div><!-- // panels -->
+    
+                </div><!-- // tab-wrap -->
+                
+            </div>
+            <!-- section-body -->
+            
+        </section>
+    
+        <!-- // タブ切り替えでカードが出てくる -->
+    
+        <!-- slider -->
+        <section class="section-wrap">
+            <div class="section-head">
+                <h2 class="section-title">
+                    スライダー
+                </h2>
+            </div>
+            <!-- section-head -->
+
+            <div class="section-body">
+                <div id="slider-wrap" class="slider-wrap">
+                    <img rel="slide1" id="slide1" class="slider-item slider-item-active" src="https://placehold.jp/500x400.png" alt="画像1">
+                    <img rel="slide2" id="slide2" class="slider-item" src="https://placehold.jp/500x401.png" alt="画像2">
+                    <img rel="slide3" id="slide3" class="slider-item" src="https://placehold.jp/500x402.png" alt="画像3">
+                    <img rel="slide4" id="slide4" class="slider-item" src="https://placehold.jp/500x403.png" alt="画像4">
+                    <button class="slider-button button-preview" id="preview"><i class="fas fa-chevron-left"></i>前へ</button>
+                    <button class="slider-button button-next" id="next">次へ<i class="fas fa-chevron-right"></i></button>
+                </div>
+                <!-- slider-wrap -->
+            </div>
+            <!-- section-body -->
+        </section>
+        <!-- slider -->
+        
+        <!-- hover animation -->
+        <section class="section-wrap">
+            <div class="section-head">
+                <h2 class="section-title">
+                    マウスホバー アニメーション
+                </h2>
+            </div>
+            <!-- section-head -->
+
+            <div class="section-body">
+                <!-- hover underline -->
+                <div class="underline-list-wrap">
+                    <p class="section-text">
+                        マウスホバーでアンダーラインを表示する
+                    </p>
+                    <ul class="list-wrap">
+    
+                        <!-- list-item1 -->
+                        <li class="list-item">
+                            <a href="#!" class="list-link hover">
+                                シンプル
+                            </a>
+                        </li>
+                        <!-- list-item1 -->
+    
+                        <!-- list-item2 -->
+                        <li class="list-item">
+                            <a href="#!" class="list-link underline right-to-left">
+                                右 → 左 → 消える 下線
+                            </a>
+                        </li>
+                        <!-- list-item2 -->
+    
+                        <!-- list-item3 -->
+                        
+                        <li class="list-item">
+                            <a href="#!" class="list-link underline left-to-right">
+                                左 → 右 下線
+                            </a>
+                        </li>
+                        <!-- list-item3 -->
+    
+                        <!-- list-item4 -->
+                        <li class="list-item">
+                            <a href="#!" class="list-link fade-in">
+                                フェードイン
+                            </a>
+                        </li>
+                        <!-- list-item4 -->
+    
+                        <!-- list-item5 -->
+                        <li class="list-item">
+                            <a href="#!" class="list-link center">
+                                真ん中から
+                            </a>
+                        </li>
+                        <!-- list-item5 -->
+    
+                    </ul><!-- list-wrap -->
+                </div>
+                <!-- hover underline -->
+ 
+                <!-- css animation drop list -->
+                <p class="section-text">
+                    ドロップリストを表示するアニメーション
+                </p>
+                <div class="drop-list-wrap">
+                    <!-- drop-list 1 -->
+                    <ul class="drop-list">
+                        <!-- menu -->
+                        <li class="drop-item-menu">
+                            <a class="drop-link" href="#!">
+                                ドロップリストメニュー
+                            </a>
+                        </li>
+                        <!-- menu -->
+                        <div class="drop-item-wrap">
+                            <!-- リスト1 -->
+                            <li class="drop-item">
+                                <a class="drop-link" href="#!">
+                                    リスト1
+                                </a>
+                            </li>
+                            <!-- リスト1 -->
+            
+                            <!-- リスト2 -->
+                            <li class="drop-item">
+                                <a class="drop-link" href="#!">
+                                    リスト1
+                                </a>
+                            </li>
+                            <!-- リスト2 -->
+            
+                            <!-- リスト3 -->
+                            <li class="drop-item">
+                                <a class="drop-link" href="#!">
+                                    リスト1
+                                </a>
+                            </li>
+                            <!-- リスト3 -->
+            
+                            <!-- リスト4 -->
+                            <li class="drop-item">
+                                <a class="drop-link" href="#!">
+                                    リスト1
+                                </a>
+                            </li>
+                            <!-- リスト4 -->
+                            
+                        </div><!-- drop-item-wrap -->
+                    </ul>
+                    <!-- drop-list 1 -->
+                
+                    <!-- drop-list 2 -->
+                    <ul class="drop-list">
+                        <!-- menu -->
+                        <li class="drop-item-menu">
+                            <a class="drop-link" href="#!">
+                                ドロップリストメニュー
+                            </a>
+                        </li>
+                        <!-- menu -->
+                        <div class="drop-item-wrap">
+                            <!-- リスト1 -->
+                            <li class="drop-item">
+                                <a class="drop-link" href="#!">
+                                    リスト1
+                                </a>
+                            </li>
+                            <!-- リスト1 -->
+            
+                            <!-- リスト2 -->
+                            <li class="drop-item">
+                                <a class="drop-link" href="#!">
+                                    リスト1
+                                </a>
+                            </li>
+                            <!-- リスト2 -->
+            
+                            <!-- リスト3 -->
+                            <li class="drop-item">
+                                <a class="drop-link" href="#!">
+                                    リスト1
+                                </a>
+                            </li>
+                            <!-- リスト3 -->
+            
+                            <!-- リスト4 -->
+                            <li class="drop-item">
+                                <a class="drop-link" href="#!">
+                                    リスト1
+                                </a>
+                            </li>
+                            <!-- リスト4 -->
+                            
+                        </div><!-- drop-item-wrap -->
+                    </ul>
+                    <!-- drop-list 2 -->
+                
+                    <!-- drop-list 3 -->
+                    <ul class="drop-list">
+                        <!-- menu -->
+                        <li class="drop-item-menu">
+                            <a class="drop-link" href="#!">
+                                ドロップリストメニュー
+                            </a>
+                        </li>
+                        <!-- menu -->
+                        <div class="drop-item-wrap">
+                            <!-- リスト1 -->
+                            <li class="drop-item">
+                                <a class="drop-link" href="#!">
+                                    リスト1
+                                </a>
+                            </li>
+                            <!-- リスト1 -->
+            
+                            <!-- リスト2 -->
+                            <li class="drop-item">
+                                <a class="drop-link" href="#!">
+                                    リスト1
+                                </a>
+                            </li>
+                            <!-- リスト2 -->
+            
+                            <!-- リスト3 -->
+                            <li class="drop-item">
+                                <a class="drop-link" href="#!">
+                                    リスト1
+                                </a>
+                            </li>
+                            <!-- リスト3 -->
+            
+                            <!-- リスト4 -->
+                            <li class="drop-item">
+                                <a class="drop-link" href="#!">
+                                    リスト1
+                                </a>
+                            </li>
+                            <!-- リスト4 -->
+                            
+                        </div><!-- drop-item-wrap -->
+                    </ul>
+                    <!-- drop-list 3 -->
+                
+                    <!-- drop-list 4 -->
+                    <ul class="drop-list">
+                        <!-- menu -->
+                        <li class="drop-item-menu">
+                            <a class="drop-link" href="#!">
+                                ドロップリストメニュー
+                            </a>
+                        </li>
+                        <!-- menu -->
+                        <div class="drop-item-wrap">
+                            <!-- リスト1 -->
+                            <li class="drop-item">
+                                <a class="drop-link" href="#!">
+                                    リスト1
+                                </a>
+                            </li>
+                            <!-- リスト1 -->
+            
+                            <!-- リスト2 -->
+                            <li class="drop-item">
+                                <a class="drop-link" href="#!">
+                                    リスト1
+                                </a>
+                            </li>
+                            <!-- リスト2 -->
+            
+                            <!-- リスト3 -->
+                            <li class="drop-item">
+                                <a class="drop-link" href="#!">
+                                    リスト1
+                                </a>
+                            </li>
+                            <!-- リスト3 -->
+            
+                            <!-- リスト4 -->
+                            <li class="drop-item">
+                                <a class="drop-link" href="#!">
+                                    リスト1
+                                </a>
+                            </li>
+                            <!-- リスト4 -->
+                            
+                        </div><!-- drop-item-wrap -->
+                    </ul>
+                    <!-- drop-list 4 -->
+                
+                </div>
+                <!-- css animation drop list -->
+                
+                
+
+
+            </div>
+            <!-- section-body -->
+        </section>
+        <!-- hover animation -->
+
+        <!-- iframe 埋め込み -->
+        <section class="section-wrap">
+            <div class="section-head">
+                <h2 class="section-title">
+                    地図の埋め込み
+                </h2>
+            </div>
+            <!-- section-head -->
+
+            <div class="section-body iframe-wrap">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.8200288870785!2d139.71696565125336!3d35.681433180097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c93d2bf454d%3A0x7ff35705735fbd08!2z44CSMTYwLTAwMTYg5p2x5Lqs6YO95paw5a6_5Yy65L-h5r-D55S677yT77yV!5e0!3m2!1sja!2sjp!4v1611544291958!5m2!1sja!2sjp"
+                    width="600"
+                    height="450"
+                    frameborder="0"
+                    style="border:0;"
+                    allowfullscreen=""
+                    aria-hidden="false"
+                    tabindex="0">
+                </iframe>
+            </div>
+            <!-- section-body -->
+        </section>
+        <!-- iframe 埋め込み -->
+        
+        <!-- レスポンシブ画像 -->
+        <section class="section-wrap">
+                <div class="section-head">
+                    <h2 class="section-title">
+                        レスポンシブ画像
+                    </h2>
+                </div>
+                <!-- section-head -->
+    
+                <div class="section-body">
+
+                    <div class="media-object">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+                            <source media="(min-width: 768px)" srcset="https://placehold.jp/500x500.png">
+                            <img class="media-object-picture" src="https://placehold.jp/500x500.png" alt="ダミー画像">
+                        </picture>
+                        <p class="media-object-text">
+                            デバイスのサイズによって、画像のサイズを変更することができる。スマホなどの携帯端末ではデータサイズが小さい画像の読み込みをすることで、通信量の節約や通信速度の改善になる。
+                        </p>
+                    </div>
+                    <!-- media-object -->
+                    <div class="media-object flip">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+                            <source media="(min-width: 768px)" srcset="https://placehold.jp/500x500.png">
+                            <img class="media-object-picture" src="https://placehold.jp/500x500.png" alt="ダミー画像">
+                        </picture>
+                        <p class="media-object-text">
+                            デバイスのサイズによって、画像のサイズを変更することができる。スマホなどの携帯端末ではデータサイズが小さい画像の読み込みをすることで、通信量の節約や通信速度の改善になる。
+                        </p>
+                    </div>
+                    <!-- media-object -->
+                </div>
+                <!-- section-body -->
+            </section>
+        <!-- レスポンシブ画像 -->
+    </main>
+
+    <footer class="footer-wrap">
+        <div class="footer-head">
+
+        </div>
+        <!-- footer-head -->
+        <div class="footer-body">
+
+        </div>
+        <!-- footer-body -->
+        <div class="footer-bottom">
+            <small>&copy; 2021年 hasegawanaotaka</small>
+            <!-- top top -->
+            <div class="to-top-wrap" id="toTop">
+                <a href="#!" class="to-top-link">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+            </div>
+            <!-- top top -->
+        </div>
+        <!-- footer-bottom -->
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
