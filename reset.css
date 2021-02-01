@@ -1,0 +1,282 @@
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;/* imgにはwidth: 100%;を設定し、外側の囲みに対して、max-width: 100%; を設定する */
+    vertical-align: bottom;
+    object-fit: cover;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* font-sizeの設定 */
+html {
+  font-size: 62.5%;
+  /* rootのfont-sizeを10pxに設定 */
+}
+
+body {
+  font-size: 1.6em;
+  /* 1rem = 10px : body内では指定がなければ、16px */
+}
+
+button {
+     background-color: transparent;
+     border: none;
+     cursor: pointer;
+     outline: none;
+     padding: 0;
+     appearance: none;
+}
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing:0;
+}
+
+input,
+textarea {
+    resize: none;
+    appearance: none;
+    outline: none;
+	border: 1px solid #333333;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+
+/**
+Accessibility
+**/
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * YUI 3.5.0 - reset.css (http://developer.yahoo.com/yui/3/cssreset/)
+ * http://cssreset.com/
+ * Copyright 2012 Yahoo! Inc. All rights reserved.
+ * http://yuilibrary.com/license/
+ */
+/*
+	TODO will need to remove settings on HTML since we can't namespace it.
+	TODO with the prefix, should I group by selector or property for weight savings?
+*/
+
+/*
+	TODO remove settings on BODY since we can't namespace it.
+*/
+/*
+	TODO test putting a class on HEAD.
+		- Fails on FF.
+*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+figure {
+	margin:0;
+	padding:0;
+}
+
+fieldset,
+img {
+	border:0;
+}
+/*
+	TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+	font-style:normal;
+	font-weight:normal;
+}
+ 
+ol,
+ul {
+	list-style:none;
+}
+ 
+caption,
+th {
+	text-align:left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,
+q:after {
+	content:'';
+}
+abbr,
+acronym {
+	border:0;
+	font-variant:normal;
+}
+/* to preserve line-height and selector appearance */
+sup {
+	vertical-align:text-top;
+}
+sub {
+	vertical-align:text-bottom;
+}
+input,
+textarea,
+select {
+	font-family:inherit;
+	font-size:inherit;
+	font-weight:inherit;
+}
+/*to enable resizing for IE*/
+input,
+textarea,
+select {
+	*font-size:100%;
+}
+/*because legend doesn't inherit in IE */
+legend {
+	color:#000;
+}
+/* YUI CSS Detection Stamp */
+#yui3-css-stamp.cssreset { display: none; }
+
+/* form */
+    /* デフォルトのスタイルを消して、統一する */
+    input,
+    input[type="search"],
+    input[type="checkbox"],
+    input[type="radio"],
+    button[type="submit"],
+    select,
+    textarea {
+        -webkit-appearance: none;
+        appearance: none;
+        outline: none;
+        border: 1px solid #333333;
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 0;
+        padding: 10px;
+        font-family : inherit;
+        font-size   : 100%;
+        margin-top: 8px;
+    }
+    textarea {
+        resize: none;
+    }
+    label,
+    select {
+        cursor: pointer;
+        width: 100%;
+    }
+    /* デフォルトのスタイルを消す */
+
+    /* radioボタンとcheckボタンの共通スタイル */
+    input[type="radio"] ,
+    input[type="checkbox"] {
+        position: relative;
+        width: 1em;
+        height: 1em;
+        border: 2px solid #333333;
+        vertical-align: -6px;
+        cursor: pointer;
+    }
+    input[type="checkbox"]::before,
+    input[type="radio"]::before
+    {
+        position: absolute;
+        visibility: hidden;
+    }
+    input[type="checkbox"]:checked::before,
+    input[type="radio"]:checked::before {
+        visibility: visible;
+    }
+    /* // radioボタンとcheckボタンのスタイル */
+
+    /* radioのスタイル */
+    input[type="radio"] {
+        border-radius: 50%;/* radioは丸っこくする */
+    }
+    input[type="radio"]::before {
+        content: "";
+        display: block;
+        font-size: 1.2em;
+        right: 8px;
+        top: 2px;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: blue;/* 選択された時の色 */
+        transform: translate(3px, 3px);
+    }
+    /* // radioのスタイル */
+
+    /* checkのスタイル */
+    input[type="checkbox"]::before {
+        content: "✔︎";
+        color: blue;/* チェックマークの色 */
+        font-size: 1.2em;
+        right: 0;
+        top: -0.3em;
+    }
+    /* // checkのスタイル */
+
+    /* selectのスタイル */
+    .select-wrap {
+        position: relative;
+    }
+    .select-wrap::after {/* selectに擬似要素が適用できないため  */
+        content: "▼";/* selectの▼をリセット */
+        position: absolute;
+        display: block;
+        top: 14px;
+        right: 20px;
+        font-size: 1.6rem;
+    }
+    /* // selectのスタイル */
+/* form */
