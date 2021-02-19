@@ -1,0 +1,40 @@
+// color
+ // common
+ $base-color: #ffffff;
+ $text-color: #333333;
+ $main-color: #333333;
+ $accent-color: #333333;
+ $sub-color: #333333;
+ $link-color: #ffffff;
+ $border-color: #dddddd;
+
+ // sns
+ $facebook-color: #1877f2;
+ $twitter-color: #1DA1F2;
+ $youtube-color: #cd201f;
+ $line-color: #00b900;
+ $feedly-color: #6CC655;
+ $hatena-color: #00A4DE;
+
+ 
+ // color
+
+// breakpoint
+ // レイアウト幅
+ $layout-width-inner: 1280px;
+
+ // ブレイクポイント
+ $breakpoints: (
+  "sp": "only screen and (max-width: 767px)",
+  "tab": "only screen and (max-width: #{$layout-width-inner - 1px})",
+  "pc": "only screen and (min-width: #{$layout-width-inner})"
+ );
+
+ // mixin
+ @mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+   @content;
+ 
+  }
+ }
+// breakpoint

@@ -1,0 +1,30 @@
+- imgディレクトリ
+    - 参考 https://tsudoi.org/guide/detail/10.html
+
+    - ファイル名ルール
+        - icon アイコン タイプ
+        - pic 写真・画像 タイプ
+        - bg 背景 タイプ
+        - txt テキスト タイプ
+        - btn ボタン タイプ
+
+    1. サイト共通で使用する画像ファイル
+        - imgフォルダの直下に保存
+        - /img/icon.jpg
+        
+        - ”画像タイプ" + 連番
+        - 例 icon1.jpg, pic4.jpg, txt0.png
+
+        - "画像タイプ" + "_文字列"
+        - 例 icon_fb.svg, icon_tw.svg icon_search.svg
+
+
+    2. サイト共通モジュール内で使用する画像ファイル
+        - header, footer, gnav, mainなどのBlock
+        - /img/module/"Block名" + "_Element名" + "連番"
+        - /img/module/header_logo.jpg
+
+        - 'Block名' + '_' + 'Element名' + '_' + '画像タイプ名' + '必要であれば連番'
+        - /img/module/header_logo_bg.png
+    3. ページにのみ使用する画像ファイル
+        - 

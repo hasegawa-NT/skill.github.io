@@ -1,0 +1,42 @@
+- SCSSディレクトリ
+    - "_"がついているファイルはimport用。
+    - "_"がついていなければ、出力されるファイル。
+    - 参考
+        - https://tsudoi.org/guide/detail/8.html
+        - https://tsudoi.org/guide/detail/9.html
+
+    - baseディレクトリ ※タグ指定
+        - ベースとなるスタイル
+        - _reset.scssでスタイルのリセット
+        - _base.scssでサイト共通で設定する必要のあるスタイル
+
+    - mixinディレクトリ
+        - 別Blockで同じスタイルが必要になった場合にmixinを定義する.
+        - _btn
+        - _animation
+        - _breakpoint
+        - _font
+        - _hover
+
+    - moduleディレクトリ
+        - サイト共通で使用するモジュール別のスタイル定義
+        - _header
+        - _footer
+        - _main
+        - _content
+        - _side
+        - _gnav(global navigation)
+        - _fnav(footer navigation)
+
+    - pageディレクトリ
+        - ページ単位で使用するスタイルの定義
+
+    - pluginsディレクトリ
+        - 外部プラグインのスタイル
+        - slickやwowなどのプラグインに付随するcssファイルを格納する。
+    - settingディレクトリ
+        - 初期設定で必要なパラメータなどの定義
+        - _config 変数
+        - _function
+    - scssディレクトリ直下にあるstyle.scss
+        - サイト共通のモジュールや設定ファイルをインポートするSCSSファイル。
