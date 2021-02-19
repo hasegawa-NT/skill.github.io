@@ -123,4 +123,187 @@ a {
 }
 
 /* / base css */
+/* header */
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1vh 4vw;
+  /* header-wrap内の要素のpadding */
+  background-color: #dddddd;
+  /* 見やすくするための色 */
+  /* header-logo */
+  /* header-logo */
+  /* header-button */
+}
+
+.header-logo {
+  z-index: 20;
+}
+
+.header-button {
+  width: 30px;
+  height: 30px;
+  z-index: 20;
+  position: relative;
+  background-color: #ffffff;
+  /* 見やすくするための色 */
+}
+
+.header-bar {
+  position: absolute;
+  left: 3px;
+  width: 20px;
+  height: 2px;
+  background-color: #dddddd;
+  /* クリックされた時の動き */
+  /* クリックされた時の動き */
+}
+
+.header-bar.open.header-bar_top {
+  -webkit-transform: rotate(45deg) translate(7px, 7px);
+          transform: rotate(45deg) translate(7px, 7px);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.header-bar.open.header-bar_mid {
+  visibility: hidden;
+  -webkit-transition: visibility .1s;
+  transition: visibility .1s;
+}
+
+.header-bar.open.header-bar_btm {
+  -webkit-transform: rotate(-45deg) translate(7px, -8px);
+          transform: rotate(-45deg) translate(7px, -8px);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.header-bar_top {
+  top: 2px;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  /* 閉じた時のアニメーション時間 */
+}
+
+.header-bar_mid {
+  top: 12px;
+  -webkit-transition: -webkit-transform .1s;
+  transition: -webkit-transform .1s;
+  transition: transform .1s;
+  transition: transform .1s, -webkit-transform .1s;
+  /* 閉じた時のアニメーション時間 */
+}
+
+.header-bar_btm {
+  bottom: 2px;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  /* 閉じた時のアニメーション時間 */
+}
+
+/* header-button */
+/* headerの途中まで レスポンシブをなんとかしたい */
+/* header */
+@media only screen and (max-width: 767px) {
+  /* スマホからタブレットサイズ */
+  /* gnav */
+  .gnav {
+    /* 共通 */
+    display: none;
+    position: fixed;
+    z-index: 10;
+    background-color: var(--main-color);
+    /* バーガーボタンを押した時のヘッダーリストの背景色 */
+    height: 100vh;
+    top: 0;
+    /* 共通 */
+    /* 全体に表示する */
+    /* width: 100vw;
+  left: 0; */
+    /* 全体に表示する */
+    /* 右から出る時 */
+    width: 70vw;
+    right: 0;
+    /* 右から出る時 */
+    /* 左から出る */
+    /* width: 50vw;
+  left: 0; */
+    /* 左から出る */
+  }
+  .gnav::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -70vw;
+    /* widthを揃えて、「-」をつける */
+    /* 全体に表示 */
+    width: 100vw;
+    height: 100vh;
+    /* 全体に表示 */
+    background-color: #dddddd;
+    /* マスクの色 */
+    opacity: .5;
+    /* 透過する */
+  }
+  .gnav-list {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .gnav-item {
+    margin-bottom: 5vh;
+  }
+  .gnav-item a {
+    color: #dddddd;
+    font-size: 1.6rem;
+  }
+  .no-scroll {
+    overflow: hidden;
+  }
+  /* header-nav */
+}
+
+@media only screen and (min-width: 1280px) {
+  /* タブレットサイズ以上 */
+  /* burger-button */
+  .header-button {
+    display: none;
+  }
+  /* burger-button */
+  /* header-nav */
+  .gnav {
+    display: block;
+  }
+  -item {
+    display: inline-block;
+    margin-right: 1.6rem;
+  }
+  -item a {
+    color: var(--link-color);
+    font-size: 1.6rem;
+  }
+  /* header-nav */
+}
+
+/* header */
 /*# sourceMappingURL=style.css.map */
