@@ -3,8 +3,8 @@ $(function() {
  /* header */
  $('.header-button').on('click', function() {
      $('.header-bar').toggleClass('open');
-     $('.gnav').toggle();/* header-navを表示・非表示 */
-     $('body').toggleClass('no-scroll');/* header-navが開いているときはスクロールしない */
+     $('.gnav').toggle();/* gnavを表示・非表示 */
+     $('body').toggleClass('no-scroll');/* gnavが開いているときはスクロールしない */
  });
 
  /* リンクをクリックした時の動き */
