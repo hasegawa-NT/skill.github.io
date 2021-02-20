@@ -307,4 +307,17 @@ a {
 
 /* header レスポンシブ */
 /* header */
+.main {
+  padding: 2vh 4vw;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* section */
+.section-title {
+  text-align: center;
+  font-size: 3.2rem;
+}
+
+/* section */
 /*# sourceMappingURL=style.css.map */
