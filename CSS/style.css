@@ -138,13 +138,14 @@ a {
   /* header-wrap内の要素のpadding */
   background-color: #dddddd;
   /* 見やすくするための色 */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
   /* header-logo */
   /* header-logo */
   /* header-button */
-}
-
-.header-logo {
-  z-index: 20;
 }
 
 .header-button {
@@ -218,9 +219,8 @@ a {
 }
 
 /* header-button */
-/* headerの途中まで レスポンシブをなんとかしたい */
-/* header */
-@media only screen and (max-width: 767px) {
+/* headerレスポンシブ */
+@media only screen and (max-width: 1023px) {
   /* スマホからタブレットサイズ */
   /* gnav */
   .gnav {
@@ -228,7 +228,7 @@ a {
     display: none;
     position: fixed;
     z-index: 10;
-    background-color: var(--main-color);
+    background-color: #333333;
     /* バーガーボタンを押した時のヘッダーリストの背景色 */
     height: 100vh;
     top: 0;
@@ -283,27 +283,28 @@ a {
   /* header-nav */
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
   /* タブレットサイズ以上 */
-  /* burger-button */
+  /* header-button */
   .header-button {
     display: none;
   }
-  /* burger-button */
-  /* header-nav */
+  /* header-button */
+  /* gnav */
   .gnav {
     display: block;
   }
-  -item {
+  .gnav-item {
     display: inline-block;
     margin-right: 1.6rem;
   }
-  -item a {
-    color: var(--link-color);
+  .gnav-item a {
+    color: #333333;
     font-size: 1.6rem;
   }
-  /* header-nav */
+  /* gnav */
 }
 
+/* header レスポンシブ */
 /* header */
 /*# sourceMappingURL=style.css.map */
