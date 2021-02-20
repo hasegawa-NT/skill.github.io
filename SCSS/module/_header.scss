@@ -7,11 +7,14 @@
  align-items: center;
  padding: 1vh 4vw;/* header-wrap内の要素のpadding */
  background-color: $border-color;/* 見やすくするための色 */
+ width: 100%;
+ position: fixed;
+ top: 0;
+ left: 0;
+ z-index: 20;
  
  /* header-logo */
- &-logo {
-  z-index: 20;
- }
+ 
  /* header-logo */
  
  /* header-button */
@@ -58,17 +61,15 @@
 }
 /* header-button */
 
-/* headerの途中まで レスポンシブをなんとかしたい */
-
-/* header */
-@include mq('sp') {/* スマホからタブレットサイズ */
+/* headerレスポンシブ */
+@include mq('tab') {/* スマホからタブレットサイズ */
  /* gnav */
  .gnav {
   /* 共通 */
   display: none;
   position: fixed;
   z-index: 10;
-  background-color: var(--main-color);/* バーガーボタンを押した時のヘッダーリストの背景色 */
+  background-color: $main-color;/* バーガーボタンを押した時のヘッダーリストの背景色 */
   height: 100vh;
   top: 0;
   /* 共通 */
@@ -123,25 +124,26 @@
  /* header-nav */
 }
 @include mq('pc') {/* タブレットサイズ以上 */
- /* burger-button */
+ /* header-button */
  .header-button {
   display: none;
  }
- /* burger-button */
- /* header-nav */
+ /* header-button */
+ /* gnav */
  .gnav {
   display: block;
- }
- 
- &-item {
-  display: inline-block;
-  margin-right: 1.6rem;
-  a {
-   color: var(--link-color);
-   font-size: 1.6rem;
+  
+  &-item {
+    display: inline-block;
+    margin-right: 1.6rem;
+    a {
+      color: $text-color;
+      font-size: 1.6rem;
+    }
   }
- }
- /* header-nav */
+  }
+ /* gnav */
 }
+/* header レスポンシブ */
 
 /* header */
