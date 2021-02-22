@@ -37,4 +37,14 @@ a {
   }
 }
 
+img,
+iframe {
+ // Web Design Trends https://webdesign-trends.net/entry/11308
+ // クリスタ https://crestadesign.org/img-css/
+ max-width: 100%;
+ object-fit: cover;
+ object-position: left top;
+ vertical-align: bottom;// 下の余白予防
+}
+
 /* / base css */
