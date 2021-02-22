@@ -122,6 +122,16 @@ a {
   text-decoration: none;
 }
 
+img,
+iframe {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left top;
+     object-position: left top;
+  vertical-align: bottom;
+}
+
 /* / base css */
 /* header */
 .header {
@@ -321,8 +331,13 @@ a {
 
 /* section */
 /* iframeの埋め込み */
-.map-iframe iframe {
+.map-iframe {
   aspect-ratio: 16 / 9;
+}
+
+.map-iframe iframe {
+  width: 100%;
+  height: 100%;
 }
 
 /* iframeの埋め込み */
