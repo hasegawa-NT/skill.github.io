@@ -3,28 +3,31 @@
 // https://coliss.com/articles/build-websites/operation/css/how-to-use-aspect-ratio-css-property.html
 // https://developer.mozilla.org/ja/docs/Web/CSS/@media/aspect-ratio
 .map {
+// 古い指定方法
+//  &-iframe {
+//  position: relative;
+//  margin: 0 auto;
+//  width: 100%;
  
- // &-iframe {
- // position: relative;
- // margin: 0 auto;
- // width: 100%;
+//  padding-top: 75%; // = 埋め込んだiframeのheight ÷ 埋め込んだiframeのwidth ✖️ 100
  
- // padding-top: 75%; 
- // // = 埋め込んだiframeのheight ÷ 埋め込んだiframeのwidth ✖️ 100
- 
- //  iframe {
- //   position: absolute;
- //   top: 0;
- //   left: 0;
- //   width: 100%;
- //   height: 100%;
- //   }
- // }
- &-iframe {
+//   iframe {
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    width: 100%;
+//    height: 100%;
+//    }
+//  }
+// 古い指定方法
 
-  iframe {
-   aspect-ratio: 16 / 9;
-  }
+ &-iframe {
+   aspect-ratio: 16 / 9; // アスペクト比 = 16 : 9
+
+   iframe {
+     width: 100%;
+     height: 100%;
+   }
  }
 
 }
