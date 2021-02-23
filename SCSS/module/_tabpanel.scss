@@ -1,0 +1,102 @@
+/* tab panel */
+.tab-wrap {
+ width: 100%;
+ max-width: 980px;
+ margin: 0 auto;
+ padding: 4vh 4vw;/* 全体の余白 */
+}
+.tabs {
+ display: flex;
+}
+.tab {
+ padding: 1%;/* タブの肉 */
+ margin-right: 1%;/* タブ間の隙間 */
+ color: #ffffff;
+ background-color: skyblue;/* 非アクティブなタブの色 */
+}
+.tab-active {
+ background-color: blue;/* アクティブのタブの色 */
+}
+.panels {
+ transform: translateY(-1px);/* よくわからない隙間を埋めるための記述 */
+}
+.panel {
+ display: none;/* 普段は隠しておく */
+ background-color: skyblue;
+ padding: 3%;
+}
+.panel-show {
+ display: block;/* イベントが起こると、現れる */
+}
+
+/* article */
+/* articleの見た目 */
+.card {
+ box-shadow: 0 2px 5px #333333;/* 浮かんで見える */
+ background-color: $base-color;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ margin-top: auto; /* 要素の高さを揃える */
+
+ &-title,
+ &-picture,
+ &-text,
+ &-link {
+  margin-bottom: 5%;
+ }
+
+ &-title {
+  font-size: 2rem;
+  font-weight: bold;
+ }
+
+ &-picture {
+  width: 100%;
+  img {
+   // ここから 上の余白が取れない
+  }
+ }
+
+ &-link {
+  padding: 1rem 1.4em;/* ボタンの大きさ */
+  display: inline-block;
+  border: 1px solid $border-color;/* 囲み線 */
+  &:hover,
+  &:active {
+   opacity: .5;
+   transition:
+       opacity     /* property */
+       .5s         /* delay */
+       ease-in-out /* timing-function */
+   ;
+  }
+ }
+/* articleの見た目 */
+
+/* article内の順番を決める */
+
+&-picture {
+ order: 0;/* articleのpictureを1番目に表示する */
+}
+&-title {
+ order: 1;/* articleのタイトルを2番目に表示する */
+}
+&-text {
+ order: 2;
+}
+&-link {
+ order: 3;
+}
+}
+/* article内の順番を決める */
+/* article */
+
+/* article_gallery */
+ .gallery:hover,
+ .gallery:active {
+     cursor: pointer;
+     transform: scale(1.5);
+     transition: transform .5s ease-in-out;
+ }
+/* article_gallery */
