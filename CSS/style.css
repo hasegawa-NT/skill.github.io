@@ -337,7 +337,7 @@ iframe {
 /* header レスポンシブ */
 /* header */
 .main {
-  padding: 2vh 4vw;
+  padding: 100px 4vw;
   max-width: 1024px;
   margin: 0 auto;
 }
