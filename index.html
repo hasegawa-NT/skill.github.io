@@ -17,13 +17,13 @@
   </head>
   <body>
 
-    <header class="header">
+   <header class="header">
      
     <!-- logo-wrap -->
-     <div class="header-logo">
-      <img src="./" alt="ロゴ画像">            
-      <h1 class="site-title">headerロゴ</h1>
-     </div><!-- / logo-wrap -->
+    <div class="header-logo">
+     <img src="./" alt="ロゴ画像">            
+     <h1 class="site-title">headerロゴ</h1>
+    </div><!-- / logo-wrap -->
     
     <button class="header-button">
      <span class="header-bar header-bar_top"></span>
@@ -40,240 +40,219 @@
      </ul>
     </nav><!-- / gnav -->
 
-    </header>
+   </header>
    
-    <main class="main">
+   <main class="main">
     
 <!-- タブ切り替えでカードが出てくる -->
-<section class="section">
-<h2 class="section-title">タブパネル jQuery</h2>
-<div class="tab-wrap">
-<ul class="tabs">
-<li class="tab tab-active" rel="panel1">cardタイプ</li>
-<li class="tab" rel="panel2">画像ギャラリー</li>
-<li class="tab" rel="panel3">リンク集</li>
-</ul><!-- // tabs -->
-</div><!-- // tab-wrap -->       
-<div class="panels">
-<!-- cardタイプ -->
-<div class="panel panel-show" id="panel1">
-<div class="card-wrap">
-<!-- card1 -->
-<article class="card">
-<div class="card-head">
-<h3 class="card-title">アーティクル1のタイトル</h3>
-<picture class="card-picture">
-<source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
-<source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
-<img src="https://placehold.jp/500x500.png" alt="画像1">
-</picture>
-</div>
-<!-- article-head -->
-<div class="card-body">
-<p class="card-text">
-画面サイズによって、読み込む画像を選択する。<br>
-タブレット未満では画像は150 × 150、それ以上だと500 × 500の画像が表示される。
-</p>
-</div>
-<!-- article-body -->
-<div class="card-foot">
-<a href="#!" class="card-link">
-記事のリンク
-</a>
-</div>
-<!-- article-foot -->
-</article>
-<!-- card1 -->
-
-<!-- card2 -->
-<article class="card">
-<div class="card-head">
-<h3 class="card-title">アーティクル1のタイトル</h3>
-<picture class="card-picture">
-<source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
-<source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
-<img src="https://placehold.jp/500x500.png" alt="画像1">
-</picture>
-</div>
-<!-- article-head -->
-<div class="card-body">
-<p class="card-text">
-画面サイズによって、読み込む画像を選択する。<br>
-タブレット未満では画像は150 × 150、それ以上だと500 × 500の画像が表示される。
-</p>
-</div>
-<!-- article-body -->
-<div class="card-foot">
-<a href="#!" class="card-link">
-記事のリンク
-</a>
-</div>
-<!-- article-foot -->
-</article>
-<!-- card2 -->
-
-<!-- card3 -->
-<article class="card">
-<div class="card-head">
-<h3 class="card-title">アーティクル1のタイトル</h3>
-<picture class="card-picture">
-<source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
-<source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
-<img src="https://placehold.jp/500x500.png" alt="画像1">
-</picture>
-</div>
-<!-- article-head -->
-<div class="card-body">
-<p class="card-text">
-画面サイズによって、読み込む画像を選択する。<br>
-タブレット未満では画像は150 × 150、それ以上だと500 × 500の画像が表示される。
-</p>
-</div>
-<!-- article-body -->
-<div class="card-foot">
-<a href="#!" class="card-link">
-記事のリンク
-</a>
-</div>
-<!-- article-foot -->
-</article>
-<!-- card3 -->
-
-<!-- card4 -->
-<article class="card">
-<div class="card-head">
-<h3 class="card-title">アーティクル1のタイトル</h3>
-<picture class="card-picture">
-<source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
-<source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
-<img src="https://placehold.jp/500x500.png" alt="画像1">
-</picture>
-</div>
-<!-- article-head -->
-<div class="card-body">
-<p class="card-text">
-画面サイズによって、読み込む画像を選択する。<br>
-タブレット未満では画像は150 × 150、それ以上だと500 × 500の画像が表示される。
-</p>
-</div>
-<!-- article-body -->
-<div class="card-foot">
-<a href="#!" class="card-link">
-記事のリンク
-</a>
-</div>
-<!-- article-foot -->
-</article>
-<!-- card4 -->
-</div><!-- article-wrap -->
-</div>
-<!-- cardタイプ -->
-        
-<!-- 画像ギャラリー -->
-<div class="panel" id="panel2">
-<div class="gallery-wrap">
-<!-- ギャラリー1 -->
-<article class="gallery">
-<div class="gallery-body">
-    <picture class="gallery-picture">
-        <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
-        <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
-        <img src="https://placehold.jp/500x500.png" alt="画像1">
+    <section class="section">
+    <h2 class="section-title">タブパネル jQuery</h2>
+    <div class="tab-wrap">
+    <ul class="tabs">
+    <li class="tab tab-active" rel="panel1">cardタイプ</li>
+    <li class="tab" rel="panel2">画像ギャラリー</li>
+    <li class="tab" rel="panel3">リンク集</li>
+    </ul><!-- // tabs -->
+    </div><!-- // tab-wrap -->       
+    <div class="panels">
+    <!-- cardタイプ -->
+    <div class="panel panel-show" id="panel1">
+    <div class="card-wrap">
+    <!-- card1 -->
+    <article class="card">
+    <div class="card-head">
+    <h3 class="card-title">アーティクル1のタイトル</h3>
+    <picture class="card-picture">
+    <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+    <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
+    <img src="https://placehold.jp/500x500.png" alt="画像1">
     </picture>
-</div>
-</article>
-<!-- ギャラリー記事1 -->
-
-<!-- ギャラリー2 -->
-<article class="gallery">
-    <div class="gallery-body">
-        <picture class="gallery-picture">
-            <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
-            <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
-            <img src="https://placehold.jp/500x500.png" alt="画像1">
-        </picture>
     </div>
-</article>
-<!-- ギャラリー2 -->
-
-<!-- ギャラリー3 -->
-<article class="gallery">
-    <div class="gallery-body">
-        <picture class="gallery-picture">
-            <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
-            <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
-            <img src="https://placehold.jp/500x500.png" alt="画像1">
-        </picture>
-    </div>
-</article>
-<!-- ギャラリー3 -->
-
-<!-- ギャラリー4 -->
-<article class="gallery">
-    <div class="gallery-body">
-        <picture class="gallery-picture">
-            <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
-            <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
-            <img src="https://placehold.jp/500x500.png" alt="画像1">
-        </picture>
-    </div>
-</article>
-<!-- ギャラリー4 -->
-
-<!-- ギャラリー5 -->
-<article class="gallery">
-    <div class="gallery-body">
-        <picture class="gallery-picture">
-            <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
-            <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
-            <img src="https://placehold.jp/500x500.png" alt="画像1">
-        </picture>
-    </div>
-</article>
-<!-- ギャラリー5 -->
-
-<!-- ギャラリー6 -->
-<article class="gallery">
-    <div class="gallery-body">
-        <picture class="gallery-picture">
-            <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
-            <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
-            <img src="https://placehold.jp/500x500.png" alt="画像1">
-        </picture>
-    </div>
-</article>
-<!-- ギャラリー6 -->
-
-</div><!-- gallery-wrap -->
-</div>
-<!-- 画像ギャラリー -->
-
-<!-- News集 -->
-<div class="panel" id="panel3">
-<div class="news-wrap">
-<!-- news1 -->
-<article class="news">
-    <h3 class="news-title">
-        <a class="news-link" href="#!">
-            記事のタイトル
-        </a>
-    </h3>
-    
-    <img class="news-picture" src="https://placehold.jp/150x150.png" alt="ダミー画像">
-
-    <p class="news-date">
-        <time datetime="2021/12/10">2021/12/10</time>
+    <!-- article-head -->
+    <div class="card-body">
+    <p class="card-text">
+    画面サイズによって、読み込む画像を選択する。<br>
+    タブレット未満では画像は150 × 150、それ以上だと500 × 500の画像が表示される。
     </p>
-    <p class="news-tag">
-        <a class="news-link" href="#!">
-            お知らせ
-        </a>
-    </p>
-</article>
-<!-- news1 -->
+    </div>
+    <!-- article-body -->
+    <div class="card-foot">
+    <a href="#!" class="card-link">
+    記事のリンク
+    </a>
+    </div>
+    <!-- article-foot -->
+    </article>
+    <!-- card1 -->
 
-<!-- news2 -->
-<article class="news">
+    <!-- card2 -->
+    <article class="card">
+    <div class="card-head">
+    <h3 class="card-title">アーティクル1のタイトル</h3>
+    <picture class="card-picture">
+    <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+    <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
+    <img src="https://placehold.jp/500x500.png" alt="画像1">
+    </picture>
+    </div>
+    <!-- article-head -->
+    <div class="card-body">
+    <p class="card-text">
+    画面サイズによって、読み込む画像を選択する。<br>
+    タブレット未満では画像は150 × 150、それ以上だと500 × 500の画像が表示される。
+    </p>
+    </div>
+    <!-- article-body -->
+    <div class="card-foot">
+    <a href="#!" class="card-link">
+    記事のリンク
+    </a>
+    </div>
+    <!-- article-foot -->
+    </article>
+    <!-- card2 -->
+
+    <!-- card3 -->
+    <article class="card">
+    <div class="card-head">
+    <h3 class="card-title">アーティクル1のタイトル</h3>
+    <picture class="card-picture">
+    <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+    <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
+    <img src="https://placehold.jp/500x500.png" alt="画像1">
+    </picture>
+    </div>
+    <!-- article-head -->
+    <div class="card-body">
+    <p class="card-text">
+    画面サイズによって、読み込む画像を選択する。<br>
+    タブレット未満では画像は150 × 150、それ以上だと500 × 500の画像が表示される。
+    </p>
+    </div>
+    <!-- article-body -->
+    <div class="card-foot">
+    <a href="#!" class="card-link">
+    記事のリンク
+    </a>
+    </div>
+    <!-- article-foot -->
+    </article>
+    <!-- card3 -->
+
+    <!-- card4 -->
+    <article class="card">
+    <div class="card-head">
+    <h3 class="card-title">アーティクル1のタイトル</h3>
+    <picture class="card-picture">
+    <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+    <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
+    <img src="https://placehold.jp/500x500.png" alt="画像1">
+    </picture>
+    </div>
+    <!-- article-head -->
+    <div class="card-body">
+    <p class="card-text">
+    画面サイズによって、読み込む画像を選択する。<br>
+    タブレット未満では画像は150 × 150、それ以上だと500 × 500の画像が表示される。
+    </p>
+    </div>
+    <!-- article-body -->
+    <div class="card-foot">
+    <a href="#!" class="card-link">
+    記事のリンク
+    </a>
+    </div>
+    <!-- article-foot -->
+    </article>
+    <!-- card4 -->
+    </div><!-- article-wrap -->
+    </div>
+    <!-- cardタイプ -->
+            
+    <!-- 画像ギャラリー -->
+    <div class="panel" id="panel2">
+    <div class="gallery-wrap">
+    <!-- ギャラリー1 -->
+    <article class="gallery">
+    <div class="gallery-body">
+        <picture class="gallery-picture">
+            <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+            <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
+            <img src="https://placehold.jp/500x500.png" alt="画像1">
+        </picture>
+    </div>
+    </article>
+    <!-- ギャラリー記事1 -->
+
+    <!-- ギャラリー2 -->
+    <article class="gallery">
+        <div class="gallery-body">
+            <picture class="gallery-picture">
+                <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+                <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
+                <img src="https://placehold.jp/500x500.png" alt="画像1">
+            </picture>
+        </div>
+    </article>
+    <!-- ギャラリー2 -->
+
+    <!-- ギャラリー3 -->
+    <article class="gallery">
+        <div class="gallery-body">
+            <picture class="gallery-picture">
+                <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+                <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
+                <img src="https://placehold.jp/500x500.png" alt="画像1">
+            </picture>
+        </div>
+    </article>
+    <!-- ギャラリー3 -->
+
+    <!-- ギャラリー4 -->
+    <article class="gallery">
+        <div class="gallery-body">
+            <picture class="gallery-picture">
+                <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+                <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
+                <img src="https://placehold.jp/500x500.png" alt="画像1">
+            </picture>
+        </div>
+    </article>
+    <!-- ギャラリー4 -->
+
+    <!-- ギャラリー5 -->
+    <article class="gallery">
+        <div class="gallery-body">
+            <picture class="gallery-picture">
+                <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+                <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
+                <img src="https://placehold.jp/500x500.png" alt="画像1">
+            </picture>
+        </div>
+    </article>
+    <!-- ギャラリー5 -->
+
+    <!-- ギャラリー6 -->
+    <article class="gallery">
+        <div class="gallery-body">
+            <picture class="gallery-picture">
+                <source media="(max-width: 767px)" srcset="https://placehold.jp/150x150.png">
+                <source media="(min-width: 786px)" srcset="https://placehold.jp/500x500.png">
+                <img src="https://placehold.jp/500x500.png" alt="画像1">
+            </picture>
+        </div>
+    </article>
+    <!-- ギャラリー6 -->
+
+    </div><!-- gallery-wrap -->
+    </div>
+    <!-- 画像ギャラリー -->
+
+    <!-- News集 -->
+    <div class="panel" id="panel3">
+    <div class="news-wrap">
+    <!-- news1 -->
+    <article class="news">
         <h3 class="news-title">
             <a class="news-link" href="#!">
                 記事のタイトル
@@ -281,28 +260,7 @@
         </h3>
         
         <img class="news-picture" src="https://placehold.jp/150x150.png" alt="ダミー画像">
-    
-        <p class="news-date">
-            <time datetime="2021/12/10">2021/12/10</time>
-        </p>
-        <p class="news-tag">
-            <a class="news-link" href="#!">
-                お知らせ
-            </a>
-        </p>
-</article>
-<!-- news2 -->
 
-<!-- news3 -->
-<article class="news">
-        <h3 class="news-title">
-            <a class="news-link" href="#!">
-                記事のタイトル
-            </a>
-        </h3>
-        
-        <img class="news-picture" src="https://placehold.jp/150x150.png" alt="ダミー画像">
-    
         <p class="news-date">
             <time datetime="2021/12/10">2021/12/10</time>
         </p>
@@ -312,35 +270,77 @@
             </a>
         </p>
     </article>
-<!-- news3 -->
+    <!-- news1 -->
 
-<!-- news4 -->
-<article class="news">
-        <h3 class="news-title">
-            <a class="news-link" href="#!">
-                記事のタイトル
-            </a>
-        </h3>
+    <!-- news2 -->
+    <article class="news">
+            <h3 class="news-title">
+                <a class="news-link" href="#!">
+                    記事のタイトル
+                </a>
+            </h3>
+            
+            <img class="news-picture" src="https://placehold.jp/150x150.png" alt="ダミー画像">
         
-        <img class="news-picture" src="https://placehold.jp/150x150.png" alt="ダミー画像">
-    
-        <p class="news-date">
-            <time datetime="2021/12/10">2021/12/10</time>
-        </p>
-        <p class="news-tag">
-            <a class="news-link" href="#!">
-                お知らせ
-            </a>
-        </p>
+            <p class="news-date">
+                <time datetime="2021/12/10">2021/12/10</time>
+            </p>
+            <p class="news-tag">
+                <a class="news-link" href="#!">
+                    お知らせ
+                </a>
+            </p>
     </article>
-<!-- news4 -->
-</div><!-- news-wrap -->
-</div>
-<!-- News集 -->
+    <!-- news2 -->
 
-</div><!-- // panels -->
-</section>
-<!-- // タブ切り替えでカードが出てくる -->
+    <!-- news3 -->
+    <article class="news">
+            <h3 class="news-title">
+                <a class="news-link" href="#!">
+                    記事のタイトル
+                </a>
+            </h3>
+            
+            <img class="news-picture" src="https://placehold.jp/150x150.png" alt="ダミー画像">
+        
+            <p class="news-date">
+                <time datetime="2021/12/10">2021/12/10</time>
+            </p>
+            <p class="news-tag">
+                <a class="news-link" href="#!">
+                    お知らせ
+                </a>
+            </p>
+        </article>
+    <!-- news3 -->
+
+    <!-- news4 -->
+    <article class="news">
+            <h3 class="news-title">
+                <a class="news-link" href="#!">
+                    記事のタイトル
+                </a>
+            </h3>
+            
+            <img class="news-picture" src="https://placehold.jp/150x150.png" alt="ダミー画像">
+        
+            <p class="news-date">
+                <time datetime="2021/12/10">2021/12/10</time>
+            </p>
+            <p class="news-tag">
+                <a class="news-link" href="#!">
+                    お知らせ
+                </a>
+            </p>
+        </article>
+    <!-- news4 -->
+    </div><!-- news-wrap -->
+    </div>
+    <!-- News集 -->
+
+    </div><!-- // panels -->
+    </section>
+    <!-- // タブ切り替えでカードが出てくる -->
     
 <!-- slider -->
 <section class="section-wrap">
