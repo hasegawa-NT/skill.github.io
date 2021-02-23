@@ -119,7 +119,26 @@ p {
 }
 
 a {
+  outline: none;
   text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+a:link {
+  color: #0000ff;
+}
+
+a:visited {
+  color: #800080;
+}
+
+a:focus, a:hover {
+  border-bottom: 1px solid;
+  text-decoration: none;
+}
+
+a:active {
+  color: #ff0000;
 }
 
 img,

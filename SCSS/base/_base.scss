@@ -1,4 +1,4 @@
-
+@import "../setting/config";
 /* base css */
 /* 
     - font-size
@@ -21,21 +21,29 @@ body {
 p {
   text-indent: 1rem;
 }
+// https://developer.mozilla.org/ja/docs/Learn/CSS/Styling_text/Styling_links
 a {
+  outline: none;
   text-decoration: none;
-  &:hover {
-
+  padding: 2px 1px 0;
+  &:link {
+    color: $link-color;
   }
-  &:active {
-
-  }
-  &:focus {
-
-  }
+  
   &:visited {
-    
+    color: $visited-color;
+  }
+  
+  &:focus, &:hover {
+    border-bottom: 1px solid;
+    text-decoration: none;
+  }
+  
+  &:active {
+    color: $active-color;
   }
 }
+
 
 img,
 iframe {
