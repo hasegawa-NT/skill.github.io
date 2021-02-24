@@ -29,16 +29,17 @@
  display: block;/* イベントが起こると、現れる */
 }
 
-/* article */
-/* articleの見た目 */
+// card
 .card {
- box-shadow: 0 2px 5px #333333;/* 浮かんで見える */
+ box-shadow: 0 2px 5px #333333; // 浮かんで見える
  background-color: $base-color;
  display: flex;
  flex-direction: column;
  align-items: center;
- margin-top: auto; /* 要素の高さを揃える */
 
+ @include mq('tab') {
+  margin-bottom: 5%;
+}
  &-title,
  &-picture,
  &-text,
@@ -47,56 +48,168 @@
  }
 
  &-title {
+  order: 1; // 2番目に表示
   font-size: 2rem;
   font-weight: bold;
  }
 
  &-picture {
+  order: 0; // 一番最初に表示
   width: 100%;
-  img {
-   // ここから 上の余白が取れない
-  }
  }
 
+ &-text {
+    order: 2;
+    padding: 0 4vw;
+   }
+
  &-link {
-  padding: 1rem 1.4em;/* ボタンの大きさ */
+  order: 3;
+  padding: 1rem 1.4em; // ボタンの大きさ
   display: inline-block;
-  border: 1px solid $border-color;/* 囲み線 */
+  border: 1px solid $border-color; // 囲み線
+  margin-top: auto;  // 要素の高さを揃える
+
   &:hover,
   &:active {
    opacity: .5;
+   border: 1px solid;
    transition:
-       opacity     /* property */
-       .5s         /* delay */
-       ease-in-out /* timing-function */
+       opacity     // property
+       .5s         // delay
+       ease-in-out // timing-function
    ;
   }
  }
-/* articleの見た目 */
+}
 
-/* article内の順番を決める */
+// card
 
-&-picture {
- order: 0;/* articleのpictureを1番目に表示する */
-}
-&-title {
- order: 1;/* articleのタイトルを2番目に表示する */
-}
-&-text {
- order: 2;
-}
-&-link {
- order: 3;
-}
-}
-/* article内の順番を決める */
-/* article */
+// gallery
+.gallery {
+  // パネルが小さくなる 多分.panelかな?
+  &-list {
+    @include mq('tab') {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @include mq('pc') {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+  }
+  
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2.5%;
+    
+    &:hover,
+    &:active {
+      cursor: pointer;
+    transform: scale(1.2);
+    transition: transform .5s ease-in-out;
+    }
 
-/* article_gallery */
- .gallery:hover,
- .gallery:active {
-     cursor: pointer;
-     transform: scale(1.5);
-     transition: transform .5s ease-in-out;
- }
-/* article_gallery */
+    @include mq('tab') {
+      margin-bottom: 5%;
+    }
+  }
+  
+}
+// gallery
+
+    // 下線
+    .news {
+        position: relative;
+        padding: 2vh 2vw;
+    }
+    .news::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid var(--border-color);
+    }
+    // 下線
+
+    .news-tag {
+        border: 1px solid var(--border-color);
+        text-align: center;
+        max-width: 100px;
+    }
+    .news-link {
+        display: inline-block;
+        padding: 1rem 1.4rem;
+    }
+    /* article-news */
+
+@include mq('tab') {
+    
+    
+    .news {
+        display: grid;
+        grid-template: 
+            "date      tag"   auto
+            "thumbnail title" auto
+            / 1fr      1fr
+        ;
+        gap: 5%;
+        align-items: center;
+    }
+    
+    .news-title {
+        grid-area: title;
+    }
+    .news-picture {
+        grid-area: thumbnail;
+    }
+    .news-date {
+        grid-area: date;
+    }
+    .news-tag {
+        grid-area: tag;
+    }
+
+}
+@include mq('pc') {
+    .card-wrap,
+    .gallery-wrap {
+        display: grid;
+        grid-template: 1fr 1fr / auto auto; // columns / rows 増減可能
+        gap: 20px; // columnsとrowsの間
+    }
+    .card,
+    .gallery {
+        max-width: 500px; // 画像サイズに合わせた
+    }
+    
+    .news {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .news-title {
+        order: 4;
+    }
+    .news-picture {
+        order: 3;
+        max-width: 150px;
+    }
+    .news-tag {
+        order: 2;
+    }
+    .news-date {
+        order: 1;
+    }
+    
+    
+}
+
+
+/* tab panel */
