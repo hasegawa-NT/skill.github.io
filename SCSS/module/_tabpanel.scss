@@ -123,63 +123,62 @@
 }
 // gallery
 
+.news {
     // 下線
-    .news {
-        position: relative;
-        padding: 2vh 2vw;
-    }
-    .news::after {
+    position: relative;
+    padding: 4vh 2vw;
+    &::after {
         content: "";
         position: absolute;
         bottom: 0;
         display: block;
         width: 100%;
-        border-bottom: 1px solid var(--border-color);
-    }
-    // 下線
+        border-bottom: 1px solid $border-color;
+    }// 下線
 
-    .news-tag {
-        border: 1px solid var(--border-color);
-        text-align: center;
-        max-width: 100px;
+  &-tag {
+    border: 1px solid $border-color;
+    text-align: center;
+    max-width: 100px;
+    
+    a {
+      display: inline-block;
+      padding: 1rem 1.4rem;
     }
-    .news-link {
-        display: inline-block;
-        padding: 1rem 1.4rem;
-    }
-    /* article-news */
+  }
+  }
 
-@include mq('tab') {
-    
-    
+
+  
+  // ここからわからんなった
+  @include mq('tab') {
     .news {
-        display: grid;
-        grid-template: 
-            "date      tag"   auto
-            "thumbnail title" auto
-            / 1fr      1fr
-        ;
-        gap: 5%;
-        align-items: center;
+      display: grid;
+      grid-template: 
+          "date      tag"   auto
+          "thumbnail title" auto
+          / 1fr      1fr
+      ;
+      gap: 5%;
+      align-items: center;
     }
-    
-    .news-title {
-        grid-area: title;
+    &-title {
+      grid-area: title;
     }
-    .news-picture {
+    &-picture {
         grid-area: thumbnail;
     }
-    .news-date {
+    &-date {
         grid-area: date;
     }
-    .news-tag {
+    &-tag {
         grid-area: tag;
     }
+  }
 
-}
 @include mq('pc') {
     .card-wrap,
-    .gallery-wrap {
+    .gallery-list {
         display: grid;
         grid-template: 1fr 1fr / auto auto; // columns / rows 増減可能
         gap: 20px; // columnsとrowsの間
