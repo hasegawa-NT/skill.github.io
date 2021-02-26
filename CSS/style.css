@@ -397,6 +397,17 @@ iframe {
   /* イベントが起こると、現れる */
 }
 
+@media only screen and (min-width: 1024px) {
+  .card-wrap {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+    -ms-grid-columns: auto auto;
+        grid-template: 1fr 1fr / auto auto;
+    gap: 20px;
+  }
+}
+
 .card {
   -webkit-box-shadow: 0 2px 5px #333333;
           box-shadow: 0 2px 5px #333333;
@@ -462,14 +473,12 @@ iframe {
   transition: opacity 0.5s ease-in-out;
 }
 
-@media only screen and (max-width: 1023px) {
-  .gallery-list {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
+.gallery-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -516,6 +525,13 @@ iframe {
 }
 
 .news {
+  display: -ms-grid;
+  display: grid;
+  grid-template: "date      tag"   auto "thumbnail title" auto / 1fr      1fr;
+  gap: 5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   padding: 4vh 2vw;
 }
@@ -529,10 +545,23 @@ iframe {
   border-bottom: 1px solid #dddddd;
 }
 
+.news-title {
+  grid-area: title;
+}
+
+.news-picture {
+  grid-area: thumbnail;
+}
+
+.news-date {
+  grid-area: date;
+}
+
 .news-tag {
+  grid-area: tag;
   border: 1px solid #dddddd;
   text-align: center;
-  max-width: 100px;
+  min-width: 120px;
 }
 
 .news-tag a {
@@ -540,44 +569,7 @@ iframe {
   padding: 1rem 1.4rem;
 }
 
-@media only screen and (max-width: 1023px) {
-  .news {
-    display: -ms-grid;
-    display: grid;
-    grid-template: "date      tag"   auto "thumbnail title" auto / 1fr      1fr;
-    gap: 5%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  -title {
-    grid-area: title;
-  }
-  -picture {
-    grid-area: thumbnail;
-  }
-  -date {
-    grid-area: date;
-  }
-  -tag {
-    grid-area: tag;
-  }
-}
-
 @media only screen and (min-width: 1024px) {
-  .card-wrap,
-  .gallery-list {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: 1fr 1fr;
-    -ms-grid-columns: auto auto;
-        grid-template: 1fr 1fr / auto auto;
-    gap: 20px;
-  }
-  .card,
-  .gallery {
-    max-width: 500px;
-  }
   .news {
     display: -webkit-box;
     display: -ms-flexbox;
