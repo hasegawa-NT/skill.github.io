@@ -38,15 +38,13 @@
   }
  }
 .card {
- box-shadow: 0 2px 5px #333333; // 浮かんで見える
+ box-shadow: 0 2px 5px $text-color; // 浮かんで見える
  background-color: $base-color;
  display: flex;
  flex-direction: column;
  align-items: center;
+ margin-bottom: 5%;
 
- @include mq('tab') {
-  margin-bottom: 5%;
-}
  &-title,
  &-picture,
  &-text,
@@ -68,6 +66,7 @@
  &-text {
     order: 2;
     padding: 0 4vw;
+    text-indent: $indent;
    }
 
  &-link {
@@ -95,7 +94,6 @@
 // gallery
 .gallery {
   &-list {
-     // 画像サイズに合わせた
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -119,10 +117,6 @@
       cursor: pointer;
     transform: scale(1.2);
     transition: transform .5s ease-in-out;
-    }
-
-    @include mq('tab') {
-      margin-bottom: 5%;
     }
   }
   
@@ -151,33 +145,28 @@
       width: 100%;
       border-bottom: 1px solid $border-color;
   }// 下線
+
   &-title {
     grid-area: title;
   }
+
   &-picture {
       grid-area: thumbnail;
   }
+
   &-date {
       grid-area: date;
   }
+
   &-tag {
     grid-area: tag;
     border: 1px solid $border-color;
     text-align: center;
-    min-width: 120px;
-    
-    a {
-      display: inline-block;
-      padding: 1rem 1.4rem;
-    }
+    max-width: 150px;
   }
-}
 
-@include mq('pc') {
-  
-  
-  
-  .news {
+  // レスポンシブ
+  @include mq('pc') {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -198,6 +187,16 @@
     &-date {
       order: 1;
     }
+  }
+  // レスポンシブ
+}// news
+
+@include mq('pc') {
+  
+  
+  
+  .news {
+    
 
   }
 
