@@ -32,7 +32,7 @@ a {
   }
   
   &:focus, &:hover {
-    border-bottom: 1px solid;
+    border-bottom: 1px solid $link-color;
     text-decoration: none;
   }
   
@@ -40,7 +40,6 @@ a {
     color: $active-color;
   }
 }
-
 
 img,
 iframe {
@@ -50,6 +49,32 @@ iframe {
  object-fit: cover;
  object-position: left top;
  vertical-align: bottom;// 下の余白予防
+}
+
+button {
+  // https://qiita.com/nabettu/items/1593af04e48444c45c53
+  // https://codepen.io/piccalilli/pen/Vxpjvo
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  appearance: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: center;
+  
+  &:hover,
+  &:focus {
+    background-color: $active-color;
+  }
+
+  &:focus {
+    outline: 1px solid;
+  }
+
+  &:active {
+    transform: scale(0.99);
+  }
 }
 
 /* / base css */
