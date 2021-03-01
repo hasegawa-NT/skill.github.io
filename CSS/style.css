@@ -129,7 +129,7 @@ a:visited {
 }
 
 a:focus, a:hover {
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #0000ff;
   text-decoration: none;
 }
 
@@ -145,6 +145,32 @@ iframe {
   -o-object-position: left top;
      object-position: left top;
   vertical-align: bottom;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: center;
+}
+
+button:hover, button:focus {
+  background-color: #0000ff;
+}
+
+button:focus {
+  outline: 1px solid;
+}
+
+button:active {
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
 }
 
 /* / base css */
@@ -346,51 +372,43 @@ iframe {
 
 /* section */
 /* tab panel */
-.tab-wrap {
+.tabs {
   width: 100%;
   max-width: 980px;
   margin: 0 auto;
-  padding: 4vh 4vw;
-  /* 全体の余白 */
+  padding: 0;
 }
 
-.tabs {
+.tabs .tablist {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.tab {
-  padding: 1%;
-  /* タブの肉 */
+.tabs .tab {
+  padding: 2%;
   margin-right: 1%;
-  /* タブ間の隙間 */
   color: #ffffff;
   background-color: skyblue;
-  /* 非アクティブなタブの色 */
 }
 
-.tab-active {
+.tabs .tab-active {
   background-color: blue;
-  /* アクティブのタブの色 */
 }
 
 .panels {
   -webkit-transform: translateY(-1px);
           transform: translateY(-1px);
-  /* よくわからない隙間を埋めるための記述 */
 }
 
 .panel {
   display: none;
-  /* 普段は隠しておく */
   background-color: skyblue;
   padding: 3%;
 }
 
 .panel-show {
   display: block;
-  /* イベントが起こると、現れる */
 }
 
 @media only screen and (min-width: 1024px) {
@@ -458,11 +476,12 @@ iframe {
   margin-top: auto;
 }
 
-.card-link:hover, .card-link:active {
-  opacity: .5;
-  border: 1px solid;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
+.card-link:hover, .card-link:active, .card-link:focus {
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
+  border: 1px solid #0000ff;
+  -webkit-transition: scale 0.5s ease-in-out;
+  transition: scale 0.5s ease-in-out;
 }
 
 .gallery-list {

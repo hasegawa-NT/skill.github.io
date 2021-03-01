@@ -1,32 +1,38 @@
 /* tab panel */
-.tab-wrap {
+.tabs {
  width: 100%;
  max-width: 980px;
  margin: 0 auto;
- padding: 4vh 4vw;/* 全体の余白 */
+ padding: 0; // 全体の余白
+ 
+ .tablist {
+  display: flex;
+ }
+
+ .tab {
+  padding: 2%; // タブの肉
+  margin-right: 1%; // タブ間の隙間
+  color: $base-color;
+  background-color: skyblue; // 非アクティブなタブの色
+
+  }
+
+  .tab-active {
+    background-color: blue; // アクティブのタブの色
+   }
 }
-.tabs {
- display: flex;
-}
-.tab {
- padding: 1%;/* タブの肉 */
- margin-right: 1%;/* タブ間の隙間 */
- color: #ffffff;
- background-color: skyblue;/* 非アクティブなタブの色 */
-}
-.tab-active {
- background-color: blue;/* アクティブのタブの色 */
-}
+
+
 .panels {
- transform: translateY(-1px);/* よくわからない隙間を埋めるための記述 */
+ transform: translateY(-1px); // よくわからない隙間を埋めるための記述
 }
 .panel {
- display: none;/* 普段は隠しておく */
+ display: none; // 普段は隠しておく
  background-color: skyblue;
  padding: 3%;
 }
 .panel-show {
- display: block;/* イベントが起こると、現れる */
+ display: block; // イベントが起こると、現れる
 }
 
 // card
@@ -77,17 +83,19 @@
   margin-top: auto;  // 要素の高さを揃える
 
   &:hover,
-  &:active {
-   opacity: .5;
-   border: 1px solid;
+  &:active,
+  &:focus {
+   transform: scale(.99);
+   border: 1px solid $link-color;
    transition:
-       opacity     // property
+       scale     // property
        .5s         // delay
        ease-in-out // timing-function
    ;
   }
  }
-}
+ }
+
 
 // card
 
