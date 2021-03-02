@@ -165,7 +165,7 @@ button:hover, button:focus {
 }
 
 button:focus {
-  outline: 1px solid;
+  outline: 1px solid #0000ff;
 }
 
 button:active {
