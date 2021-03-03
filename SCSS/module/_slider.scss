@@ -1,0 +1,68 @@
+
+/* slider */
+.slider {
+ max-width: 500px;
+ margin: 2vh auto;
+ width: 100%;
+
+ &-list {
+  padding: 2vh 4vw;
+  position: relative; // ボタンの位置の基準
+ }
+
+ &-item {
+  display: none; // 初期画像以外は非表示
+  width: 100%;
+  max-width: 500px;
+ }
+
+ &-button {
+  position: absolute;
+  
+  &:active, &:focus, &:hover {
+   background-color: $base-color;
+  }
+
+  @include mq('tab') {
+   bottom: 8%; // buttonの水平位置
+
+   &_preview {
+    right: 55%; // 前へボタンの位置
+   }
+
+   &_next {
+    left: 55%; // 次へボタンの位置
+   }
+
+  }
+
+  @include mq('pc') {
+   top: 50%; // buttonの水平位置
+
+    &_preview {
+      left: 10px; // 前へボタンの位置
+    }
+
+    &_next {
+      right: 10px; // 次へボタンの位置
+    }
+
+  }
+
+ }
+
+}
+
+.slider-item-active {
+ display: block; // 初期画像の表示
+}
+
+.fa-chevron-left {
+ margin-right: 8px; // アイコンとの隙間
+}
+
+.fa-chevron-right {
+ margin-left: 8px; // アイコンとの隙間
+}
+
+/* slider */
