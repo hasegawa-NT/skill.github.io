@@ -311,27 +311,38 @@
     <!-- // タブ切り替えでカードが出てくる -->
     
 		<!-- slider -->
-		<section class="section">
+		<section class="section slider">
 
 			<h2 class="section-title">スライダー</h2>
 
 			<ul id="slider-list" class="slider-list">
 				<li rel="slide1" id="slide1" class="slider-item slider-item-active">
-						<img srcset="img/pic_480x270.jpeg 480w,
-												 img/pic_800x450.jpeg 800w"
-								 sizes="(max-width: 767px) 480px,
-											  880px" 
-								 src="img/pic_800x450.jpeg" alt="ダミー画像">
+					<img srcset="img/pic_480x270.jpeg 480w,
+											 img/pic_800x450.jpeg 800w"
+						   sizes="(max-width: 767px) 480px,
+												880px" 
+						   src="img/pic_800x450.jpeg" alt="ダミー画像">
 				</li>
 				<li rel="slide2" id="slide2" class="slider-item">
-						<img srcset="img/pic_480x270.jpeg 480w,
-												 img/pic_800x450.jpeg 800w"
-								 sizes="(max-width: 767px) 480px,
-												880px" 
-								 src="img/pic_800x450.jpeg" alt="ダミー画像">
+					<img srcset="img/pic_480x270.jpeg 480w,
+									  	 img/pic_800x450.jpeg 800w"
+							 sizes="(max-width: 767px) 480px,
+													880px" 
+							 src="img/pic_800x450.jpeg" alt="ダミー画像">
 				</li>
-			<li></li><button class="slider-button button-preview" id="preview"><i class="fas fa-chevron-left"></i>前へ</button>
-			<button class="slider-button button-next" id="next">次へ<i class="fas fa-chevron-right"></i></button>
+				<li rel="slide3" id="slide3" class="slider-item">
+					<img srcset="img/pic_480x270.jpeg 480w,
+											 img/pic_800x450.jpeg 800w"
+							 sizes="(max-width: 767px) 480px,
+													880px" 
+							 src="img/pic_800x450.jpeg" alt="ダミー画像">
+				</li>
+				<li class="slider-item_button">
+					<button class="slider-button slider-button_preview" id="preview"><i class="fas fa-chevron-left"></i>前へ</button>
+				</li>
+				<li class="slider-item_button">
+					<button class="slider-button slider-button_next" id="next">次へ<i class="fas fa-chevron-right"></i></button>
+				</li>
 			</ul>
 			<!-- slider-wrap -->
 			
