@@ -365,19 +365,19 @@
   <!-- list-item1 -->
 
   <!-- list-item2 -->
-  <li class="underline-item"><a class="left-to-right" href="#!">シンプル</a></li>
+  <li class="underline-item"><a class="left-to-right" href="#!">左 → 右</a></li>
   <!-- list-item2 -->
 
   <!-- list-item3 -->
-  <li class="underline-item"><a class="right-to-left" href="#!">シンプル</a></li>
+  <li class="underline-item"><a class="right-to-left" href="#!">右 → 左</a></li>
   <!-- list-item3 -->
 
   <!-- list-item4 -->
-  <li class="underline-item"><a href="#!">シンプル</a></li>
+  <li class="underline-item"><a class="fade-bottom" href="#!">下 → 上</a></li>
   <!-- list-item4 -->
 
   <!-- list-item5 -->
-  <li class="underline-item"><a href="#!">シンプル</a></li>
+  <li class="underline-item"><a class="slide-in" href="#!">左からスライド</a></li>
   <!-- list-item5 -->
 
  </ul><!-- list-wrap -->
@@ -385,195 +385,128 @@
 <!-- hover underline -->
 
 <!-- css animation drop list -->
-<p class="section-text">
-ドロップリストを表示するアニメーション
-</p>
-<div class="drop-list-wrap">
-<!-- drop-list 1 -->
-<ul class="drop-list">
-<!-- menu -->
-<li class="drop-item-menu">
-<a class="drop-link" href="#!">
-ドロップリストメニュー
-</a>
-</li>
-<!-- menu -->
-<div class="drop-item-wrap">
-<!-- リスト1 -->
-<li class="drop-item">
-<a class="drop-link" href="#!">
-    リスト1
-</a>
-</li>
-<!-- リスト1 -->
-
-<!-- リスト2 -->
-<li class="drop-item">
-<a class="drop-link" href="#!">
-    リスト1
-</a>
-</li>
-<!-- リスト2 -->
-
-<!-- リスト3 -->
-<li class="drop-item">
-<a class="drop-link" href="#!">
-    リスト1
-</a>
-</li>
-<!-- リスト3 -->
-
-<!-- リスト4 -->
-<li class="drop-item">
-<a class="drop-link" href="#!">
-    リスト1
-</a>
-</li>
-<!-- リスト4 -->
-
-</div><!-- drop-item-wrap -->
-</ul>
-<!-- drop-list 1 -->
-
-<!-- drop-list 2 -->
-<ul class="drop-list">
-<!-- menu -->
-<li class="drop-item-menu">
-<a class="drop-link" href="#!">
-ドロップリストメニュー
-</a>
-</li>
-<!-- menu -->
-<div class="drop-item-wrap">
-<!-- リスト1 -->
-<li class="drop-item">
-<a class="drop-link" href="#!">
-    リスト1
-</a>
-</li>
-<!-- リスト1 -->
-
-<!-- リスト2 -->
-<li class="drop-item">
-<a class="drop-link" href="#!">
-    リスト1
-</a>
-</li>
-<!-- リスト2 -->
-
-<!-- リスト3 -->
-<li class="drop-item">
-<a class="drop-link" href="#!">
-    リスト1
-</a>
-</li>
-<!-- リスト3 -->
-
-<!-- リスト4 -->
-<li class="drop-item">
-<a class="drop-link" href="#!">
-    リスト1
-</a>
-</li>
-<!-- リスト4 -->
-
-</div><!-- drop-item-wrap -->
-</ul>
-<!-- drop-list 2 -->
-
-<!-- drop-list 3 -->
-<ul class="drop-list">
-<!-- menu -->
-<li class="drop-item-menu">
-<a class="drop-link" href="#!">
-ドロップリストメニュー
-</a>
-</li>
-<!-- menu -->
-<div class="drop-item-wrap">
-<!-- リスト1 -->
-<li class="drop-item">
-<a class="drop-link" href="#!">
-    リスト1
-</a>
-</li>
-<!-- リスト1 -->
-
-<!-- リスト2 -->
-<li class="drop-item">
-<a class="drop-link" href="#!">
-    リスト1
-</a>
-</li>
-<!-- リスト2 -->
-
-<!-- リスト3 -->
-<li class="drop-item">
-<a class="drop-link" href="#!">
-    リスト1
-</a>
-</li>
-<!-- リスト3 -->
-
-<!-- リスト4 -->
-<li class="drop-item">
-<a class="drop-link" href="#!">
-    リスト1
-</a>
-</li>
-<!-- リスト4 -->
-
-</div><!-- drop-item-wrap -->
-</ul>
-<!-- drop-list 3 -->
-
-<!-- drop-list 4 -->
-<ul class="drop-list">
-<!-- menu -->
-<li class="drop-item-menu">
-<a class="drop-link" href="#!">
-ドロップリストメニュー
-</a>
-</li>
-<!-- menu -->
-<div class="drop-item-wrap">
-<!-- リスト1 -->
-<li class="drop-item">
-<a class="drop-link" href="#!">
-    リスト1
-</a>
-</li>
-<!-- リスト1 -->
-
-<!-- リスト2 -->
-<li class="drop-item">
-<a class="drop-link" href="#!">
-    リスト1
-</a>
-</li>
-<!-- リスト2 -->
-
-<!-- リスト3 -->
-<li class="drop-item">
-<a class="drop-link" href="#!">
-    リスト1
-</a>
-</li>
-<!-- リスト3 -->
-
-<!-- リスト4 -->
-<li class="drop-item">
-<a class="drop-link" href="#!">
-    リスト1
-</a>
-</li>
-<!-- リスト4 -->
-
-</div><!-- drop-item-wrap -->
-</ul>
-<!-- drop-list 4 -->
-
-</div>
+<div class="drop">
+	<p class="section-text">ドロップリストを表示するアニメーション</p>
+	
+	<ul class="drop-list">
+		<!-- drop-list 1 -->
+		<li class="drop-item_menu"><a href="#!">ドロップメニュー</a>
+	
+			<ul class="drop-list_child">
+			<!-- リスト1 -->
+			<li class="drop-item"><a href="#!">リスト1</a></li>
+			<!-- リスト1 -->
+	
+			<!-- リスト2 -->
+			<li class="drop-item"><a href="#!">リスト2</a></li>
+			<!-- リスト2 -->
+			
+			<!-- リスト3 -->
+			<li class="drop-item"><a href="#!">リスト3</a></li>
+			<!-- リスト3 -->
+	
+			<!-- リスト4 -->
+			<li class="drop-item"><a href="#!">リスト4</a></li>
+			<!-- リスト4 -->
+	
+			</ul><!-- drop-list_child -->
+		</li>
+		<!-- drop-list 1 -->
+	
+		<!-- drop-list 2 -->
+		<li class="drop-item_menu"><a href="#!">ドロップメニュー</a>
+	
+			<ul class="drop-list_child">
+			<!-- リスト1 -->
+			<li class="drop-item"><a href="#!">リスト1</a></li>
+			<!-- リスト1 -->
+	
+			<!-- リスト2 -->
+			<li class="drop-item"><a href="#!">リスト2</a></li>
+			<!-- リスト2 -->
+			
+			<!-- リスト3 -->
+			<li class="drop-item"><a href="#!">リスト3</a></li>
+			<!-- リスト3 -->
+	
+			<!-- リスト4 -->
+			<li class="drop-item"><a href="#!">リスト4</a></li>
+			<!-- リスト4 -->
+	
+			</ul><!-- drop-list_child -->
+		</li>
+		<!-- drop-list 2 -->
+	
+		<!-- drop-list 3 -->
+		<li class="drop-item_menu"><a href="#!">ドロップメニュー</a>
+	
+			<ul class="drop-list_child">
+			<!-- リスト1 -->
+			<li class="drop-item"><a href="#!">リスト1</a></li>
+			<!-- リスト1 -->
+	
+			<!-- リスト2 -->
+			<li class="drop-item"><a href="#!">リスト2</a></li>
+			<!-- リスト2 -->
+			
+			<!-- リスト3 -->
+			<li class="drop-item"><a href="#!">リスト3</a></li>
+			<!-- リスト3 -->
+	
+			<!-- リスト4 -->
+			<li class="drop-item"><a href="#!">リスト4</a></li>
+			<!-- リスト4 -->
+	
+			</ul><!-- drop-list_child -->
+		</li>
+		<!-- drop-list 3 -->
+		<li class="drop-item_menu"><a href="#!">ドロップメニュー</a>
+	
+			<ul class="drop-list_child">
+			<!-- リスト1 -->
+			<li class="drop-item"><a href="#!">リスト1</a></li>
+			<!-- リスト1 -->
+	
+			<!-- リスト2 -->
+			<li class="drop-item"><a href="#!">リスト2</a></li>
+			<!-- リスト2 -->
+			
+			<!-- リスト3 -->
+			<li class="drop-item"><a href="#!">リスト3</a></li>
+			<!-- リスト3 -->
+	
+			<!-- リスト4 -->
+			<li class="drop-item"><a href="#!">リスト4</a></li>
+			<!-- リスト4 -->
+	
+			</ul><!-- drop-list_child -->
+		</li>
+		<!-- drop-list 4 -->
+	  <li class="drop-item_menu"><a href="#!">ドロップメニュー</a>
+	
+			<ul class="drop-list_child">
+			<!-- リスト1 -->
+			<li class="drop-item"><a href="#!">リスト1</a></li>
+			<!-- リスト1 -->
+	
+			<!-- リスト2 -->
+			<li class="drop-item"><a href="#!">リスト2</a></li>
+			<!-- リスト2 -->
+			
+			<!-- リスト3 -->
+			<li class="drop-item"><a href="#!">リスト3</a></li>
+			<!-- リスト3 -->
+	
+			<!-- リスト4 -->
+			<li class="drop-item"><a href="#!">リスト4</a></li>
+			<!-- リスト4 -->
+	
+			</ul><!-- drop-list_child -->
+		</li>
+		<!-- drop-list 4 -->
+		
+	</ul><!-- // drop-list -->
+</div><!-- // drop -->
 <!-- css animation drop list -->
 
 
