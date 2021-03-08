@@ -667,7 +667,6 @@ button:active {
 }
 
 /* slider */
-/* mouse hover animation */
 .animation .section-text {
   padding-top: 5%;
   text-align: center;
@@ -786,7 +785,6 @@ button:active {
           transform: translateX(0);
 }
 
-/* css animation drop list */
 .drop-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -827,8 +825,6 @@ button:active {
           align-items: center;
 }
 
-/* css animation drop list */
-/* mouse hover animation */
 /* iframeの埋め込み */
 .map-iframe {
   aspect-ratio: 16 / 9;
