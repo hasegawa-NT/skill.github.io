@@ -698,146 +698,120 @@ button:active {
   left: 0;
   width: 0;
   height: 1px;
-  display: block;
   background-color: #0000ff;
 }
 
 .animation .left-to-right:focus::after, .animation .left-to-right:hover::after, .animation .left-to-right:active::after {
   width: 100%;
-  -webkit-transition: width 1s .5s ease-in-out;
-  transition: width 1s .5s ease-in-out;
+  -webkit-transition: width .5s .2s ease-in-out;
+  transition: width .5s .2s ease-in-out;
 }
 
-/* 下線を左から右へ */
-.left-to-right:hover::after {
-  -webkit-animation: leftToRight 1s ease-in-out forwards;
-          animation: leftToRight 1s ease-in-out forwards;
-}
-
-@-webkit-keyframes leftToRight {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes leftToRight {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-/* 下線を左から右へ */
-/* 下線を右から左へ */
-.right-to-left:hover::after,
-.right-to-left:active::after {
-  animation: rightToLeft 1s ease-in-out reverse;
-  /* ホバーしていてもアニメーションが消えてしまう */
-}
-
-@-webkit-keyframes rightToLeft {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes rightToLeft {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-/* 下線を右から左へ */
-/* 下線をfadeIn */
-.fade-in {
+.animation .right-to-left {
   position: relative;
+  border-bottom: none;
 }
 
-.fade-in::after {
+.animation .right-to-left::after {
   content: "";
-  display: block;
-  position: absolute;
-  bottom: 2px;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
-  width: 100%;
-  height: 1px;
-  background-color: var(--border-color);
-}
-
-.fade-in:hover::after {
-  opacity: 1;
-  visibility: visible;
-  bottom: -2px;
-  -webkit-transition-property: opacity, visibility, bottom;
-  transition-property: opacity, visibility, bottom;
-  -webkit-transition-duration: .2s;
-          transition-duration: .2s;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
-}
-
-/* 下線をfadeIn */
-/* 下線をcenterから表示 */
-.center {
-  position: relative;
-}
-
-.center::after {
-  content: "";
-  display: block;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: var(--border-color);
+  background-color: #0000ff;
   -webkit-transform: scale(0, 1);
           transform: scale(0, 1);
-  -webkit-transform-origin: center top;
-          transform-origin: center top;
-}
-
-.center:hover::after {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
   -webkit-transition: -webkit-transform .5s;
   transition: -webkit-transform .5s;
   transition: transform .5s;
   transition: transform .5s, -webkit-transform .5s;
 }
 
-/* 下線をcenterから表示 */
+.animation .right-to-left:focus::after, .animation .right-to-left:hover::after, .animation .right-to-left:active::after {
+  width: 100%;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.animation .fade-bottom {
+  position: relative;
+  border-bottom: none;
+}
+
+.animation .fade-bottom::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  background-color: #0000ff;
+  width: 100%;
+  visibility: hidden;
+  height: 1px;
+}
+
+.animation .fade-bottom:focus::after, .animation .fade-bottom:hover::after, .animation .fade-bottom:active::after {
+  bottom: 0;
+  visibility: visible;
+  -webkit-transition: bottom .2s ease-in-out;
+  transition: bottom .2s ease-in-out;
+}
+
+.animation .slide-in {
+  position: relative;
+  border-bottom: none;
+}
+
+.animation .slide-in::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  background-color: #0000ff;
+  width: 0;
+  height: 1px;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.animation .slide-in:focus::after, .animation .slide-in:hover::after, .animation .slide-in:active::after {
+  width: 100%;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 /* css animation drop list */
-.drop-list-wrap {
+.drop-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-top: 5%;
 }
 
-.drop-item-menu {
-  background-color: #fff;
-  /* 配色 */
+.drop-item_menu .drop-list_child {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
 }
 
-.drop-item-wrap {
-  background-color: #fff;
-  /* 配色 */
-  /* drop-itemの配置 */
+.drop-item_menu:focus .drop-list_child, .drop-item_menu:active .drop-list_child, .drop-item_menu:hover .drop-list_child {
+  visibility: visible;
+  opacity: 1;
+  height: 100px;
+  margin: 1rem 0 0;
+  -webkit-transition: height .5s ease-in-out;
+  transition: height .5s ease-in-out;
+}
+
+.drop-item_menu .drop-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -851,31 +825,6 @@ button:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* drop-itemの配置 */
-}
-
-.drop-item {
-  visibility: hidden;
-  opacity: 0;
-  height: 0;
-}
-
-.drop-list:hover .drop-item {
-  /* 基礎 show */
-  visibility: visible;
-  opacity: 1;
-  /* 適宜調整 */
-  height: 50px;
-  margin: 1rem 0 0;
-  /* 適宜調整 */
-  /* 基礎 show */
-  /* fadeIn */
-  /* transition: opacity 0s ease-in-out; */
-  /* fadeIn */
-  /* slideIn */
-  -webkit-transition: height .5s ease-in-out;
-  transition: height .5s ease-in-out;
-  /* slideIn */
 }
 
 /* css animation drop list */
