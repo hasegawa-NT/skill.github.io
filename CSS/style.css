@@ -825,6 +825,26 @@ button:active {
           align-items: center;
 }
 
+.drawer-list {
+  max-width: 150px;
+}
+
+.drawer-list_child {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  -webkit-transform: translate3d(-150px, -20px, -10px);
+          transform: translate3d(-150px, -20px, -10px);
+}
+
+.drawer-item_menu:hover .drawer-list_child {
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+  -webkit-transform: translate3d(150px, -20px, 0);
+          transform: translate3d(150px, -20px, 0);
+}
+
 /* iframeの埋め込み */
 .map-iframe {
   aspect-ratio: 16 / 9;

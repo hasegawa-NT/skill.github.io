@@ -176,4 +176,53 @@
 }
 // css animation drop list
 
+// hover drawer list
+.drawer {
+	// 共通のスタイル
+	&-list {
+		// display: inline-block;
+		max-width: 150px;
+		&_menu {
+		}
+		&_child {
+			// display: inline-block;
+			
+		}
+	}
+	// 共通のスタイル
+	&-item {
+		&_menu {
+		
+		}
+		&_child {
+			
+		}
+	}
+	// 最初から表示しているリスト
+	
+	// 最初から表示しているリスト
+
+	// 最初は隠しておくリスト
+	
+	
+	// 最初は隠しておくリスト
+		
+	
+}
+
+.drawer-list_child {
+	visibility: hidden;
+	opacity: 0;
+	height: 0;
+	transform: translate3d(-150px, -20px, -10px);
+}
+
+.drawer-item_menu:hover .drawer-list_child {
+	visibility: visible;
+	opacity: 1;
+	height: 100%;
+	transform: translate3d(150px, -20px, 0);
+}
+// hover drawer list
+
 // mouse hover animation
