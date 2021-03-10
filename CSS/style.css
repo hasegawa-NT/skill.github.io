@@ -1,11 +1,5 @@
 @charset "UTF-8";
-/* 参考 
-    モダンブラウザ用 https://github.com/hankchizljaw/modern-css-reset/blob/master/dist/reset.min.css
-                  https://coliss.com/articles/build-websites/operation/css/a-modern-css-reset.html
- */
 /* reset css */
-/* Box sizing rules */
-/* Box sizingの定義 */
 *,
 *::before,
 *::after {
@@ -13,15 +7,11 @@
           box-sizing: border-box;
 }
 
-/* Remove default padding */
-/* デフォルトのpaddingを削除 */
 ul[class],
 ol[class] {
   padding: 0;
 }
 
-/* Remove default margin */
-/* デフォルトのmarginを削除 */
 body,
 h1,
 h2,
@@ -39,8 +29,6 @@ dd {
   margin: 0;
 }
 
-/* Set core body defaults */
-/* bodyのデフォルトを定義 */
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -48,34 +36,29 @@ body {
   line-height: 1.5;
 }
 
-/* Remove list styles on ul, ol elements with a class attribute */
-/* class属性を持つul、ol要素のリストスタイルを削除 */
 ul[class],
 ol[class] {
   list-style: none;
 }
 
-/* A elements that don't have a class get default styles */
-/* classを持たない要素はデフォルトのスタイルを取得 */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-/* Make images easier to work with */
-/* img要素の扱いを簡単にする */
 img {
   max-width: 100%;
   display: block;
 }
 
-/* Natural flow and rhythm in articles by default */
-/* article要素内の要素に自然な流れとリズムを定義 */
+picture {
+  max-width: 100%;
+  display: block;
+}
+
 article > * + * {
   margin-top: 1em;
 }
 
-/* Inherit fonts for inputs and buttons */
-/* inputやbuttonなどのフォントは継承を定義 */
 input,
 button,
 textarea,
@@ -83,8 +66,6 @@ select {
   font: inherit;
 }
 
-/* Remove all animations and transitions for people that prefer not to see them */
-/* 見たくない人用に、すべてのアニメーションとトランジションを削除 */
 @media (prefers-reduced-motion: reduce) {
   * {
     -webkit-animation-duration: 0.01ms !important;
@@ -99,18 +80,11 @@ select {
 
 /* / reset css */
 /* base css */
-/* 
-    - font-size
-    - font-family
-    - テキストの色
-*/
 html {
   font-size: 62.5%;
-  /* rootのfont-sizeを10pxに設定 */
 }
 
 body {
-  /* 1rem = 10px : body内では指定がなければ、16px */
   font-size: 1.6em;
 }
 
@@ -186,17 +160,12 @@ button:active {
       -ms-flex-align: center;
           align-items: center;
   padding: 1vh 4vw;
-  /* header-wrap内の要素のpadding */
   background-color: #dddddd;
-  /* 見やすくするための色 */
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 20;
-  /* header-logo */
-  /* header-logo */
-  /* header-button */
 }
 
 .header-button {
@@ -205,7 +174,6 @@ button:active {
   z-index: 20;
   position: relative;
   background-color: #ffffff;
-  /* 見やすくするための色 */
 }
 
 .header-bar {
@@ -214,8 +182,6 @@ button:active {
   width: 20px;
   height: 2px;
   background-color: #dddddd;
-  /* クリックされた時の動き */
-  /* クリックされた時の動き */
 }
 
 .header-bar.open.header-bar_top {
@@ -248,7 +214,6 @@ button:active {
   transition: -webkit-transform .5s;
   transition: transform .5s;
   transition: transform .5s, -webkit-transform .5s;
-  /* 閉じた時のアニメーション時間 */
 }
 
 .header-bar_mid {
@@ -257,7 +222,6 @@ button:active {
   transition: -webkit-transform .1s;
   transition: transform .1s;
   transition: transform .1s, -webkit-transform .1s;
-  /* 閉じた時のアニメーション時間 */
 }
 
 .header-bar_btm {
@@ -266,36 +230,18 @@ button:active {
   transition: -webkit-transform .5s;
   transition: transform .5s;
   transition: transform .5s, -webkit-transform .5s;
-  /* 閉じた時のアニメーション時間 */
 }
 
-/* header-button */
-/* headerレスポンシブ */
 @media only screen and (max-width: 1023px) {
-  /* スマホからタブレットサイズ */
-  /* gnav */
   .gnav {
-    /* 共通 */
     display: none;
     position: fixed;
     z-index: 10;
     background-color: #333333;
-    /* バーガーボタンを押した時のヘッダーリストの背景色 */
     height: 100vh;
     top: 0;
-    /* 共通 */
-    /* 全体に表示する */
-    /* width: 100vw;
-  left: 0; */
-    /* 全体に表示する */
-    /* 右から出る時 */
     width: 70vw;
     right: 0;
-    /* 右から出る時 */
-    /* 左から出る */
-    /* width: 50vw;
-  left: 0; */
-    /* 左から出る */
   }
   .gnav::before {
     content: "";
@@ -303,15 +249,10 @@ button:active {
     position: fixed;
     top: 0;
     left: -70vw;
-    /* widthを揃えて、「-」をつける */
-    /* 全体に表示 */
     width: 100vw;
     height: 100vh;
-    /* 全体に表示 */
     background-color: #dddddd;
-    /* マスクの色 */
     opacity: .5;
-    /* 透過する */
   }
   .gnav-list {
     display: block;
@@ -331,17 +272,12 @@ button:active {
   .no-scroll {
     overflow: hidden;
   }
-  /* header-nav */
 }
 
 @media only screen and (min-width: 1024px) {
-  /* タブレットサイズ以上 */
-  /* header-button */
   .header-button {
     display: none;
   }
-  /* header-button */
-  /* gnav */
   .gnav {
     display: block;
   }
@@ -353,10 +289,8 @@ button:active {
     color: #333333;
     font-size: 1.6rem;
   }
-  /* gnav */
 }
 
-/* header レスポンシブ */
 /* header */
 .main {
   padding: 100px 4vw;
@@ -829,20 +763,33 @@ button:active {
   max-width: 150px;
 }
 
+.drawer-item_menu > a {
+  position: relative;
+}
+
+.drawer-item_menu > a::after {
+  content: ">";
+  position: absolute;
+  right: -15px;
+  color: #333333;
+}
+
 .drawer-list_child {
-  visibility: hidden;
   opacity: 0;
   height: 0;
-  -webkit-transform: translate3d(-150px, -20px, -10px);
-          transform: translate3d(-150px, -20px, -10px);
+  -webkit-transform: translate(-150px, -20px);
+          transform: translate(-150px, -20px);
+  z-index: -10;
 }
 
 .drawer-item_menu:hover .drawer-list_child {
-  visibility: visible;
   opacity: 1;
   height: 100%;
-  -webkit-transform: translate3d(150px, -20px, 0);
-          transform: translate3d(150px, -20px, 0);
+  -webkit-transform: translate(150px, -20px);
+          transform: translate(150px, -20px);
+  z-index: 1;
+  -webkit-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
 }
 
 /* iframeの埋め込み */
@@ -856,4 +803,14 @@ button:active {
 }
 
 /* iframeの埋め込み */
+.media {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 /*# sourceMappingURL=style.css.map */

@@ -180,23 +180,30 @@
 .drawer {
 	// 共通のスタイル
 	&-list {
-		// display: inline-block;
 		max-width: 150px;
-		&_menu {
-		}
-		&_child {
-			// display: inline-block;
+		// &_menu {
 			
-		}
+		// }
+		// &_child {
+			
+		// }
 	}
 	// 共通のスタイル
 	&-item {
 		&_menu {
-		
+			> a { // 直下のスタイル
+				position: relative;
+				&::after {
+					content: ">";
+					position: absolute;
+					right: -15px;
+					color: $text-color;
+				}
+			}
 		}
-		&_child {
+		// &_child {
 			
-		}
+		// }
 	}
 	// 最初から表示しているリスト
 	
@@ -211,17 +218,20 @@
 }
 
 .drawer-list_child {
-	visibility: hidden;
+	// visibility: hidden;
 	opacity: 0;
 	height: 0;
-	transform: translate3d(-150px, -20px, -10px);
+	transform: translate(-150px, -20px);
+	z-index: -10;
 }
 
 .drawer-item_menu:hover .drawer-list_child {
-	visibility: visible;
+	// visibility: visible;
 	opacity: 1;
 	height: 100%;
-	transform: translate3d(150px, -20px, 0);
+	transform: translate(150px, -20px);
+	z-index: 1;
+	transition: opacity .2s ease-in-out;
 }
 // hover drawer list
 
