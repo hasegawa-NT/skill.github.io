@@ -5,25 +5,25 @@
  display: flex;
  justify-content: space-between;
  align-items: center;
- padding: 1vh 4vw;/* header-wrap内の要素のpadding */
- background-color: $border-color;/* 見やすくするための色 */
+ padding: 1vh 4vw; // header-wrap内の要素のpadding
+ background-color: $border-color; // 見やすくするための色
  width: 100%;
  position: fixed;
  top: 0;
  left: 0;
  z-index: 20;
  
- /* header-logo */
+//  header-logo
  
- /* header-logo */
+//  header-logo
  
- /* header-button */
+//  header-button
  &-button {
   width: 30px;
   height: 30px;
   z-index: 20;
   position: relative;
-  background-color: $base-color;/* 見やすくするための色 */
+  background-color: $base-color; // 見やすくするための色
 }
  &-bar {
    position: absolute;
@@ -31,7 +31,7 @@
    width: 20px;
    height: 2px;
    background-color: $border-color;
-   /* クリックされた時の動き */
+  //  クリックされた時の動き
    &.open.header-bar_top {
       transform: rotate(45deg) translate(7px, 7px);
       transition: transform .5s;
@@ -44,62 +44,62 @@
      transform: rotate(-45deg) translate(7px, -8px);
      transition: transform .5s;
    }
-   /* クリックされた時の動き */
+  //  クリックされた時の動き
  }
  &-bar_top {
    top: 2px;
-   transition: transform .5s;/* 閉じた時のアニメーション時間 */
+   transition: transform .5s; // 閉じた時のアニメーション時間
  }
  &-bar_mid {
    top: 12px;
-   transition: transform .1s;/* 閉じた時のアニメーション時間 */
+   transition: transform .1s; // 閉じた時のアニメーション時間
  }
  &-bar_btm {
    bottom: 2px;
-   transition: transform .5s;/* 閉じた時のアニメーション時間 */
+   transition: transform .5s; // 閉じた時のアニメーション時間
  }
 }
-/* header-button */
+// header-button
 
-/* headerレスポンシブ */
-@include mq('tab') {/* スマホからタブレットサイズ */
- /* gnav */
+// headerレスポンシブ
+@include mq('tab') { // スマホからタブレットサイズ
+//  gnav
  .gnav {
-  /* 共通 */
+  // 共通
   display: none;
   position: fixed;
   z-index: 10;
-  background-color: $main-color;/* バーガーボタンを押した時のヘッダーリストの背景色 */
+  background-color: $main-color; // バーガーボタンを押した時のヘッダーリストの背景色
   height: 100vh;
   top: 0;
-  /* 共通 */
+  // 共通
 
-  /* 全体に表示する */
-  /* width: 100vw;
-  left: 0; */
-  /* 全体に表示する */
+  // 全体に表示する
+   // width: 100vw;
+   // left: 0;
+  // 全体に表示する
 
-  /* 右から出る時 */
+  // 右から出る時
   width: 70vw;
   right: 0;
-  /* 右から出る時 */
+  // 右から出る時
 
-  /* 左から出る */
-  /* width: 50vw;
-  left: 0; */
-  /* 左から出る */
+  // 左から出る
+   // width: 50vw;
+   // left: 0;
+  // 左から出る
   &::before {
    content: "";
    display: block;
    position: fixed;
    top: 0;
-   left: -70vw;/* widthを揃えて、「-」をつける */
-   /* 全体に表示 */
+   left: -70vw; // widthを揃えて、「-」をつける
+  //  全体に表示
    width: 100vw;
    height: 100vh;
-   /* 全体に表示 */
-   background-color: $border-color;/* マスクの色 */
-   opacity: .5;/* 透過する */
+  //  全体に表示
+   background-color: $border-color; // マスクの色
+   opacity: .5; // 透過する
   }
 
   &-list {
@@ -121,15 +121,15 @@
  .no-scroll {
   overflow: hidden;
  }
- /* header-nav */
+//  header-nav
 }
-@include mq('pc') {/* タブレットサイズ以上 */
- /* header-button */
+@include mq('pc') { // タブレットサイズ以上
+//  header-button
  .header-button {
   display: none;
  }
- /* header-button */
- /* gnav */
+//  header-button
+//  gnav
  .gnav {
   display: block;
   
@@ -142,8 +142,8 @@
     }
   }
   }
- /* gnav */
+//  gnav
 }
-/* header レスポンシブ */
+// header レスポンシブ
 
 /* header */
