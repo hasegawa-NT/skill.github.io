@@ -1,18 +1,18 @@
 @import "../setting/config";
 /* base css */
-/* 
-    - font-size
-    - font-family
-    - テキストの色
-*/
+
+    // - font-size
+    // - font-family
+    // - テキストの色
+
 
 html {
   font-size: 62.5%;
-  /* rootのfont-sizeを10pxに設定 */
+  // rootのfont-sizeを10pxに設定
 }
 
 body {
-  /* 1rem = 10px : body内では指定がなければ、16px */
+  // 1rem = 10px : body内では指定がなければ、16px
   font-size: 1.6em;
 //   font-family: ;
 //   color: ;
