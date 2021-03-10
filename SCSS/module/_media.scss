@@ -1,0 +1,17 @@
+.media {
+ display: grid;
+ grid-template-columns: auto auto;
+ gap: 20px;
+ align-items: center;
+ // grid-template: 
+ //  "picture text" 1fr
+ //  "text    picture" 1fr
+ //  / auto auto
+ // ;
+ &-picture {
+  // grid-area: picture;
+ }
+ &-text {
+  // grid-area: text;
+ }
+}
