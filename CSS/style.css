@@ -148,6 +148,22 @@ button:active {
 }
 
 /* / base css */
+/* footer */
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  background-color: #dedede;
+}
+
+/* footer */
 /* header */
 .header {
   display: -webkit-box;
@@ -299,9 +315,14 @@ button:active {
 }
 
 /* section */
+.section {
+  margin-bottom: 5%;
+}
+
 .section-title {
   text-align: center;
   font-size: 3.2rem;
+  margin-bottom: 5%;
 }
 
 /* section */
@@ -803,14 +824,82 @@ button:active {
 }
 
 /* iframeの埋め込み */
+/* アートディレクション */
 .media {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  gap: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1023px) {
+  .media-picture {
+    margin-bottom: 2.5%;
+  }
+  .media-text {
+    margin-bottom: 2.5%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .media {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .media-picture_flip {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .media-text_flip {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+/* アートディレクション */
+/* top */
+.top {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #0000ff;
+  cursor: pointer;
+  position: fixed;
+  right: 1%;
+  bottom: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
+
+.top .fa-arrow-up {
+  color: #ffffff;
+}
+
+/* top */
 /*# sourceMappingURL=style.css.map */

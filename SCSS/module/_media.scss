@@ -1,17 +1,38 @@
+/* アートディレクション */
 .media {
- display: grid;
- grid-template-columns: auto auto;
- gap: 20px;
+ display: flex;
+ flex-direction: column;
  align-items: center;
- // grid-template: 
- //  "picture text" 1fr
- //  "text    picture" 1fr
- //  / auto auto
- // ;
- &-picture {
-  // grid-area: picture;
+ justify-content: center;
+ max-width: $layout-width-inner;
+ margin: 0 auto;
+
+ @include mq('tab') {
+  &-picture {
+   margin-bottom: 2.5%;
+  }
+  &-text {
+   margin-bottom: 2.5%;
+  }
  }
- &-text {
-  // grid-area: text;
+
+ @include mq('pc') {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+
+  &-picture {
+   &_flip {
+    order: 2;
+   }
+  }
+
+  &-text {
+   &_flip {
+    order: 1;
+   }
+  }
  }
 }
+/* アートディレクション */
