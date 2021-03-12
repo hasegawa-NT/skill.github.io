@@ -626,39 +626,48 @@
 	
 	<div class="media">
 		<!-- media 1 -->
-		<picture>
-			<source media="(max-width: 1023px)" srcset="https://placehold.jp/150x150.png">
-			<source media="(min-width: 1024px)" srcset="https://placehold.jp/500x500.png">
-			<img class="media-picture" src="https://placehold.jp/500x500.png" alt="ダミー画像">
-		</picture>
-			
-		<p class="media-text">デバイスのサイズによって、画像のサイズを変更することができる。スマホなどの携帯端末ではデータサイズが小さい画像の読み込みをすることで、通信量の節約や通信速度の改善になる。</p>
-		<!-- media 1 -->
-		
-		<!-- media 2 -->
 		<picture class="media-picture">
-			<source media="(max-width: 1023px)" srcset="https://placehold.jp/150x150.png">
-			<source media="(min-width: 1024px)" srcset="https://placehold.jp/500x500.png">
+			<source media="(max-width: 767px)" srcset="https://placehold.jp/300x168.png">
+			<source media="(min-width: 768px)" srcset="https://placehold.jp/500x280.png">
 			<img src="https://placehold.jp/500x500.png" alt="ダミー画像">
 		</picture>
 			
-		<p class="media-text">デバイスのサイズによって、画像のサイズを変更することができる。スマホなどの携帯端末ではデータサイズが小さい画像の読み込みをすることで、通信量の節約や通信速度の改善になる。</p>
+		<p class="media-text">スマホでは画像A、PCでは画像Bなどのように<br>デバイスのサイズによって画像を変更することができる。</p>
+		<!-- media 1 -->
+		
 		<!-- media 2 -->
-	</div><!-- // media -->
+		<picture class="media-picture media-picture_flip">
+			<source media="(max-width: 767px)" srcset="https://placehold.jp/300x168.png">
+			<source media="(min-width: 768px)" srcset="https://placehold.jp/500x280.png">
+			<img src="https://placehold.jp/500x500.png" alt="ダミー画像">
+		</picture>
+			
+		<p class="media-text media-text_flip">スマホでは画像A、PCでは画像Bなどのように<br>デバイスのサイズによって画像を変更することができる。</p>
+		<!-- media 2 -->
 
+		<!-- media 3 -->
+		<picture class="media-picture">
+			<source media="(max-width: 767px)" srcset="https://placehold.jp/300x168.png">
+			<source media="(min-width: 768px)" srcset="https://placehold.jp/500x280.png">
+			<img src="https://placehold.jp/500x500.png" alt="ダミー画像">
+		</picture>
+				
+		<p class="media-text">スマホでは画像A、PCでは画像Bなどのように<br>デバイスのサイズによって画像を変更することができる。</p>
+		<!-- media 3 -->
+
+	</div><!-- // media -->
+				
 </section>
 <!-- レスポンシブ画像 -->
 </main>
 
 <footer class="footer">
+	<small>&copy; 2021年 hasegawanaotaka</small>
 
-<small>&copy; 2021年 hasegawanaotaka</small>
 <!-- top top -->
-<div class="to-top-wrap" id="toTop">
-		<a href="#!" class="to-top-link">
-		<i class="fas fa-arrow-up"></i>
-		</a>
-		
+<div class="top" id="toTop">
+	<button class="top-button"><i class="fas fa-arrow-up"></i></button>
+</div>
 <!-- top top -->
 
 </footer>
