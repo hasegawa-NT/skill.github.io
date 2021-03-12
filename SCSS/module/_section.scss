@@ -1,10 +1,12 @@
 @import "../setting/config";
 /* section */
 .section {
- 
+ margin-bottom: 5%;
+
  &-title {
   text-align: center;
   font-size: 3.2rem;
+  margin-bottom: 5%;
  }
 }
 /* section */
