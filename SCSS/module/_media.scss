@@ -1,13 +1,12 @@
 /* アートディレクション */
 .media {
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- max-width: $layout-width-inner;
- margin: 0 auto;
-
+ 
  @include mq('tab') {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
   &-picture {
    margin-bottom: 2.5%;
   }
