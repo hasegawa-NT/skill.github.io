@@ -302,7 +302,7 @@ button:active {
     margin-right: 1.6rem;
   }
   .gnav-item a {
-    color: #333333;
+    color: #262626;
     font-size: 1.6rem;
   }
 }
@@ -378,8 +378,8 @@ button:active {
 }
 
 .card {
-  -webkit-box-shadow: 0 2px 5px #333333;
-          box-shadow: 0 2px 5px #333333;
+  -webkit-box-shadow: 0 2px 5px #262626;
+          box-shadow: 0 2px 5px #262626;
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -792,7 +792,7 @@ button:active {
   content: ">";
   position: absolute;
   right: -15px;
-  color: #333333;
+  color: #262626;
 }
 
 .drawer-list_child {
