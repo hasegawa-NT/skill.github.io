@@ -1,7 +1,7 @@
 // color
  // common
  $base-color: #ffffff;
- $text-color: #333333;
+ $text-color: #262626;
  $main-color: #333333;
  $accent-color: #333333;
  $sub-color: #dedede;
@@ -57,3 +57,19 @@
  margin: $margin auto; // marginの上下の初期値は"0"
 }
 // 使い方 @include justify-center(max-width px, margin px)
+
+$bottom: 5%; // 要素の下の余白 margin-bottom :$bottom ;
+
+// font-size https://yuyakinoshita.com/blog/2019/01/31/readability-and-typography/
+ // pc
+ $title-size-pc: 4.0rem; // タイトルのサイズ
+ $heading-size-pc: 3.1rem; // 見出しのサイズ
+ $subheading-size-pc: 2.4rem; // 小見出しのサイズ
+ // pc
+
+ // sp
+ $title-size-sp: 2.4rem; // タイトルのサイズ
+ $heading-size-sp: 2.2rem; // 見出しのサイズ
+ $subheading-size-sp: 2.0rem; // 小見出しのサイズ
+ // sp
+// font-size
