@@ -43,3 +43,17 @@
  }
 // breakpoint
 
+%align-center  { // 上下左右中央の設定
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+// 使い方 @extend %align-center;
+
+@mixin justify-center($width, $margin: 0) { // 左右中央の設定
+ width: 100%;
+ max-width: $width; // $widthはinner-width
+ margin: $margin auto; // marginの上下の初期値は"0"
+}
+// 使い方 @include justify-center(max-width px, margin px)
